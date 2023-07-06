@@ -22,24 +22,24 @@ export default function RootLayout({
         <Navbar />
         {children}
         <main>
-          <div className="lg:fixed flex flex-row left-0 bottom-0 ml-14 text-white">
+          <div className="hidden lg:fixed lg:flex flex-row left-0 bottom-0 ml-14 text-white">
             <div className="text-2xl flex flex-col items-center gap-y-5">
               <Link href="https://github.com/thedudeontitan">
-                <FiGithub className="hover:scale-110 transition-all duration-500" />
+                <FiGithub className="hover:scale-125 transition-all duration-500 hover:text-[#66FCF1]" />
               </Link>
               <Link href="https://github.com/thedudeontitan">
-                <FiLinkedin className="hover:scale-110 transition-all duration-500" />
+                <FiLinkedin className="hover:scale-125 transition-all duration-500 hover:text-[#66FCF1]" />
               </Link>
               <Link href="https://github.com/thedudeontitan">
-                <FiTwitter className="hover:scale-110 transition-all duration-500" />
+                <FiTwitter className="hover:scale-125 transition-all duration-500 hover:text-[#66FCF1]" />
               </Link>
               <div className="border-l-2 h-20 border-white" />
             </div>
           </div>
-          <div className="lg:fixed flex flex-row right-0 bottom-0 mr-14 text-white">
+          <div className="hidden lg:fixed lg:flex flex-row right-0 bottom-0 mr-14 text-white">
             <div className="text-base flex flex-col items-center gap-y-5">
               <Link href="mailto:ankitkokane77@gmail.com">
-                <span className="[writing-mode:vertical-lr] hover:scale-110 transition-all duration-500">
+                <span className="[writing-mode:vertical-lr] hover:scale-110 transition-all duration-500 hover:text-[#66FCF1]">
                   ankitkokane77@gmail.com
                 </span>
               </Link>

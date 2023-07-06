@@ -8,7 +8,7 @@ function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollPos = window.pageYOffset;
+      const currentScrollPos = window.scrollY;
       const isScrolledUp = prevScrollPos > currentScrollPos;
 
       setIsScrolled(isScrolledUp);
@@ -23,49 +23,43 @@ function Navbar() {
   return (
     <div>
       <nav
-        className={`flex flex-row top-0 right-0 left-0 bg-white fixed w-full transition-all duration-500 ${
+        className={`flex flex-row top-0 right-0 left-0 fixed w-full transition-all duration-500 ${
           isScrolled
             ? "transform -translate-y-0"
             : "transform -translate-y-full"
-        } bg-white`}
+        } bg-[#0B0C10] pt-3 z-10`}
       >
         <div>
-            <span className="text-5xl"></span>
+          <span className="text-5xl"></span>
         </div>
-        <div className="flex flex-row my-5 ml-auto gap-x-5 mr-10 items-center">
+        <div className="flex flex-row my-5 ml-auto gap-x-10 mr-10 items-center text-sm font-mono">
           <Link
             href="#about"
             className="border-b-2 border-transparent hover:border-black transition-all duration-500"
           >
-            <div className="text-black">About</div>
+            <div className="text-[#f3f3f3]">About</div>
           </Link>
           <Link
             href="#experience"
             className="border-b-2 border-transparent hover:border-black transition-all duration-500"
           >
-            <div className="text-black">Experience</div>
+            <div className="text-[#f3f3f3]">Experience</div>
           </Link>
           <Link
-            href="#Projects"
+            href="#projects"
             className="border-b-2 border-transparent hover:border-black transition-all duration-500"
           >
-            <div className="text-black">Projects</div>
+            <div className="text-[#f3f3f3]">Projects</div>
           </Link>
-          {/* <Link
-            href="/blogs"
-            className="border-b-2 border-transparent hover:border-black transition-all duration-500"
-          >
-            <div className="text-black">Blogs</div>
-          </Link> */}
           <Link
             href="#contact"
             className="border-b-2 border-transparent hover:border-black transition-all duration-500"
           >
-            <div className="text-black">Contact</div>
+            <div className="text-[#f3f3f3]">Contact</div>
           </Link>
-        <button className="border border-black text-base font-medium px-2 py-1">
-          Resume
-        </button>
+          <button className="border border-[#66FCF1] text-[#66FCF1] text-sm font-medium py-2 px-4 rounded">
+            Resume
+          </button>
         </div>
       </nav>
     </div>

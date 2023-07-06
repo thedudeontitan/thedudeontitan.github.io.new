@@ -45,7 +45,7 @@ export default function About() {
                 projects.
               </span>
               <span>
-                Here are a few technologies I've been working with recently:
+                Here are a few technologies I&apos;ve been working with recently:
               </span>
             </div>
             <div className="grid grid-cols-2 gap-y-2 text-base mt-5">
