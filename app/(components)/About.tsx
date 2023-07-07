@@ -15,11 +15,11 @@ export default function About() {
 
   return (
     <section>
-      <div className="mx-96 h-screen flex ">
+      <div className="lg:mx-28 xl:mx-96 h-screen flex">
         <div className="flex flex-row justify-between w-full lg:gap-x-20">
           <div className="my-auto w-2/3">
             <div className="flex flex-row lg:gap-x-10 items-center mb-14">
-              <span className="text-4xl font-semibold text-[#f3f3f3] opacity-80">
+              <span className="text-4xl font-semibold text-[#f3f3f3] opacity-90">
                 About Me
               </span>
               <div className="border-t flex-grow border-[#353D47]" />

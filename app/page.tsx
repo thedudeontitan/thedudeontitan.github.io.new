@@ -1,6 +1,7 @@
 import React from "react";
 import About from "./(components)/About";
 import Experience from "./(components)/Experience";
+import Contact from "./(components)/Contact";
 
 export default function page() {
   return (
@@ -28,7 +29,7 @@ export default function page() {
         <span className="">Projects</span>
       </div>
       <div className="min-h-screen" id="contact">
-        <span className="">Contact</span>
+        <Contact/>
       </div>
     </div>
   );

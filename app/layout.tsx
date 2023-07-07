@@ -33,7 +33,7 @@ export default function RootLayout({
               <Link href="https://github.com/thedudeontitan">
                 <FiTwitter className="hover:scale-125 transition-all duration-500 hover:text-[#66FCF1]" />
               </Link>
-              <div className="border-l-2 h-20 border-white" />
+              <div className="border-l-2 h-32 border-white" />
             </div>
           </div>
           <div className="hidden lg:fixed lg:flex flex-row right-0 bottom-0 mr-14 text-white">
@@ -43,7 +43,7 @@ export default function RootLayout({
                   ankitkokane77@gmail.com
                 </span>
               </Link>
-              <div className="border-r-2 h-20 border-white" />
+              <div className="border-r-2 h-32 border-white" />
             </div>
           </div>
         </main>
