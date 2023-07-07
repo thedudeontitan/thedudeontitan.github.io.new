@@ -20,9 +20,9 @@ const projects: project[] = [
     key: 1,
     image_path: "/project2.png",
     type: "Web App",
-    title: "Safe Gaurd",
+    title: "Creative Dugout",
     description:
-      " A web3 application built to allow companies to help manage their crypto assets. Create multisig wallets, safe vaults and transaction groups.",
+      "A Website I created for Creative Dugout which will be ",
     tools: ["TypeScript", "ReactJS", "Solidity", "Polygon", "TailwindCSS"],
     github_link: "https://github.com/thedudeontitan/safe-gaurd",
     link: "https://github.com/thedudeontitan/safe-gaurd",
@@ -121,7 +121,7 @@ export default function Projects() {
                 >
                   <div className="mt-5 text-sm flex flex-row justify-end font-mono gap-x-2">
                     {data.tools.map((tool) => (
-                      <span>{tool}</span>
+                      <span key={tool}>{tool}</span>
                     ))}
                   </div>
                   <div className="flex flex-row justify-end text-2xl mt-4 gap-x-5">
