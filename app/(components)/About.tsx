@@ -22,7 +22,7 @@ export default function About() {
               <span className="text-4xl font-semibold text-[#f3f3f3] opacity-90">
                 About Me
               </span>
-              <div className="border-t flex-grow border-[#353D47]" />
+              <div className="border-t hidden lg:flex w-80 border-[#353D47]" />
             </div>
             <div className="flex flex-col gap-y-4 text-lg opacity-70">
               <span className="">

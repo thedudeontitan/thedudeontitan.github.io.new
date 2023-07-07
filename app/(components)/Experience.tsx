@@ -41,7 +41,7 @@ export default function Experience() {
   return (
     <section>
       <div className="h-screen flex">
-        <div className="flex flex-col my-auto w-full items-center mx-96">
+        <div className="flex flex-col my-auto w-full items-center xl:mx-96 lg:mx-24">
           <span className="text-4xl font-semibold opacity-90 text-[#f3f3f3] lg:mb-20">
             Experience
           </span>
@@ -61,7 +61,7 @@ export default function Experience() {
                 <span className="opacity-80 font-mono mb-5">
                   {info.duration}
                 </span>
-                <ul className="list-none flex flex-col gap-y-2 opacity-80 ">
+                <ul className="list-none flex flex-col gap-y-2 opacity-80 text-[#f3f3f3]">
                   {info.description.map((descrip) => (
                     <li key={descrip} className="pl-2">
                       <VscDebugBreakpointLogUnverified className="inline-block mr-2 text-[#66FCF1]" />
