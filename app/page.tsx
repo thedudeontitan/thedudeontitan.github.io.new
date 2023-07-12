@@ -5,14 +5,15 @@ import Contact from "./(components)/Contact";
 import Projects from "./(components)/Projects";
 import Link from "next/link";
 
-
 export default function page() {
   return (
     <div className="bg-[#0B0C10] text-white">
       <div className="min-h-screen">
         <div className="mx-5 lg:ml-80 flex h-screen">
           <div className="flex flex-col gap-y-5 my-auto">
-            <span className="text-lg lg:text-xl text-[#66FCF1]">Hello, I&apos;m</span>
+            <span className="text-lg lg:text-xl text-[#66FCF1]">
+              Hello, I&apos;m
+            </span>
             <span className="text-5xl lg:text-7xl font-semibold text-[#f3f3f3] ">
               Ankit Kokane.
             </span>

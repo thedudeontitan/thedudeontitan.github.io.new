@@ -15,15 +15,15 @@ export default function About() {
 
   return (
     <section>
-      <div className="lg:mx-28 xl:mx-96 h-screen flex">
-        <div className="flex flex-row justify-between w-full lg:gap-x-20">
-          <div className="my-auto w-2/3">
-            <div className="flex flex-row lg:gap-x-10 items-center mb-14">
-              <span className="text-4xl font-semibold text-[#f3f3f3] opacity-90">
-                About Me
-              </span>
-              <div className="border-t hidden lg:flex w-80 border-[#353D47]" />
-            </div>
+      <div className="lg:mx-28 xl:mx-96 h-screen flex flex-col">
+        <div className="mt-10 lg:mt-0 flex flex-row lg:gap-x-10 items-center justify-center lg:justify-normal mb-10 lg:mb-14">
+          <span className="text-4xl font-semibold text-[#f3f3f3] opacity-90">
+            About Me
+          </span>
+          <div className="border-t hidden lg:flex w-80 border-[#353D47]" />
+        </div>
+        <div className="flex flex-col-reverse lg:flex-row lg:justify-between items-center  w-full lg:gap-x-20">
+          <div className="my-auto mx-5 lg:mx-0 lg:w-2/3 mt-10 lg:mt-0">
             <div className="flex flex-col gap-y-4 text-lg opacity-70">
               <span className="">
                 Hello, I am Ankit Kokane and I enjoy creating software. I have
@@ -45,7 +45,8 @@ export default function About() {
                 projects.
               </span>
               <span>
-                Here are a few technologies I&apos;ve been working with recently:
+                Here are a few technologies I&apos;ve been working with
+                recently:
               </span>
             </div>
             <div className="grid grid-cols-2 gap-y-2 text-base mt-5">
@@ -84,7 +85,7 @@ export default function About() {
             </div>
           </div>
           <div
-            className={`border-2 border-[#66FCF1] rounded h-fit w-fit my-auto transition-all ${
+            className={` border-2 border-[#66FCF1] rounded h-fit w-fit my-auto transition-all ${
               isHovered ? "translate-x-1 translate-y-1" : ""
             }`}
           >

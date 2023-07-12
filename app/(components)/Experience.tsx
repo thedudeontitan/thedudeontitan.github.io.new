@@ -40,15 +40,18 @@ const jobs: job[] = [
 export default function Experience() {
   return (
     <section>
-      <div className="h-screen flex">
-        <div className="flex flex-col my-auto w-full items-center xl:mx-96 lg:mx-24">
-          <span className="text-4xl font-semibold opacity-90 text-[#f3f3f3] lg:mb-20">
+      <div className="mx-5 lg:mx-28 xl:mx-96 h-screen flex flex-col mt-[60vh]">
+        <div className="flex flex-col w-full items-center xl:mx-96 lg:mx-24 ">
+          <span className="text-4xl font-semibold opacity-90 text-[#f3f3f3] mb-10 lg:mb-20">
             Experience
           </span>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
             {jobs.map((info) => (
-              <div key={info.key} className="hover:bg-[#66FCF1] rounded-md transition-all">
+              <div
+                key={info.key}
+                className="hover:bg-[#66FCF1] rounded-md transition-all"
+              >
                 <div className="bg-[#0B0C10] shadow-md flex flex-col gap-2 p-5 rounded-md shadow-[#232427] h-full transition-all hover:-translate-x-2 hover:-translate-y-2">
                   <div className="inline-block font-mono font-medium">
                     <span className="text-lg">{info.title}</span>
