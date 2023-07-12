@@ -27,7 +27,7 @@ function Navbar() {
           isScrolled
             ? "transform -translate-y-0"
             : "transform -translate-y-full"
-        } bg-[#0B0C10] pt-3 z-10`}
+        } bg-[#0B0C10] pt-3 z-20`}
       >
         <div>
           <span className="text-5xl"></span>

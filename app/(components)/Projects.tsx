@@ -18,18 +18,18 @@ interface project {
 const projects: project[] = [
   {
     key: 1,
-    image_path: "/project2.png",
+    image_path: "/assets/project1.png",
     type: "Web App",
     title: "Creative Dugout",
     description:
-      "A Website I created for Creative Dugout which will be ",
-    tools: ["TypeScript", "ReactJS", "Solidity", "Polygon", "TailwindCSS"],
+      "A Website I've built for Creative Dugout which will help their business reach more clients and grow their business.",
+    tools: ["TypeScript","NextJS","TailwindCSS"],
     github_link: "https://github.com/thedudeontitan/safe-gaurd",
     link: "https://github.com/thedudeontitan/safe-gaurd",
   },
   {
     key: 2,
-    image_path: "/project2.png",
+    image_path: "/assets/project2.png",
     type: "Web App",
     title: "Safe Gaurd",
     description:
@@ -40,22 +40,22 @@ const projects: project[] = [
   },
   {
     key: 3,
-    image_path: "/project2.png",
+    image_path: "/assets/project5.png",
     type: "Web App",
-    title: "Safe Gaurd",
+    title: "Medico",
     description:
-      " A web3 application built to allow companies to help manage their crypto assets. Create multisig wallets, safe vaults and transaction groups.",
+      "Forkscanner Website is a sophisticated tool designed to actively monitor the Bitcoin blockchain in real-time, providing users with valuable insights into the state of the network.",
     tools: ["TypeScript", "ReactJS", "Solidity", "Polygon", "TailwindCSS"],
     github_link: "https://github.com/thedudeontitan/safe-gaurd",
     link: "https://github.com/thedudeontitan/safe-gaurd",
   },
   {
     key: 4,
-    image_path: "/project2.png",
-    type: "Web App",
-    title: "Safe Gaurd",
+    image_path: "/assets/project4.png",
+    type: "Mobile App",
+    title: "Health Hive",
     description:
-      " A web3 application built to allow companies to help manage their crypto assets. Create multisig wallets, safe vaults and transaction groups.",
+      "A mobile Application where users can scan the barcode on a packaged food and find out about all their harmfulness, Also analyse your recipes with the analyse tool.",
     tools: ["TypeScript", "ReactJS", "Solidity", "Polygon", "TailwindCSS"],
     github_link: "https://github.com/thedudeontitan/safe-gaurd",
     link: "https://github.com/thedudeontitan/safe-gaurd",
@@ -65,7 +65,7 @@ const projects: project[] = [
 export default function Projects() {
   return (
     <section className="min-h-screen">
-      <div className="flex w-full">
+      <div className="lg:flex w-full hidden">
         <div className="flex flex-col mx-2 lg:mx-24 xl:mx-96 w-full">
           <div className="mt-28 flex flex-row items-center gap-x-10">
             <span className="text-3xl font-semibold opacity-90 text-[#f3f3f3] ">
@@ -74,10 +74,10 @@ export default function Projects() {
             <div className="border-t w-80 lg:flex overflow-hidden border-[#353D47]" />
           </div>
           {projects.map((data) => (
-            <div className="mt-14 flex flex-col w-full" key={data.key}>
+            <div className="mt-14 flex flex-col w-full mb-5" key={data.key}>
               <div className={` flex w-full ${data.key % 2 === 0 ? "justify-end ml-24" : ""}`}>
                 <Image
-                  src="/assets/project2.png"
+                  src={data.image_path}
                   alt="project"
                   width={600}
                   height={600}
@@ -143,6 +143,9 @@ export default function Projects() {
             </div>
           ))}
         </div>
+      </div>
+      <div className="flex lg:hidden">
+
       </div>
     </section>
   );
