@@ -40,9 +40,9 @@ const jobs: job[] = [
 export default function Experience() {
   return (
     <section>
-      <div className="mx-5 lg:mx-28 xl:mx-96 h-screen flex flex-col mt-[60vh]">
+      <div className="min-h-screen mx-5 lg:mx-0 flex ">
         <div className="flex flex-col w-full items-center xl:mx-96 lg:mx-24 ">
-          <span className="text-4xl font-semibold opacity-90 text-[#f3f3f3] mb-10 lg:mb-20">
+          <span className="text-4xl font-semibold opacity-90 text-[#f3f3f3] mb-10 lg:mb-20 mt-28">
             Experience
           </span>
 

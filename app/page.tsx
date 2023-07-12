@@ -9,7 +9,7 @@ export default function page() {
   return (
     <div className="bg-[#0B0C10] text-white">
       <div className="min-h-screen">
-        <div className="mx-5 lg:ml-80 flex h-screen">
+        <div className="mx-5 lg:ml-80 flex min-h-screen">
           <div className="flex flex-col gap-y-5 my-auto">
             <span className="text-lg lg:text-xl text-[#66FCF1]">
               Hello, I&apos;m
@@ -37,16 +37,16 @@ export default function page() {
         </div>
       </div>
 
-      <div className="min-h-screen" id="about">
+      <div className="" id="about">
         <About />
       </div>
-      <div className="min-h-screen" id="experience">
+      <div className="" id="experience">
         <Experience />
       </div>
-      <div className="min-h-screen" id="projects">
+      <div className="" id="projects">
         <Projects />
       </div>
-      <div className="min-h-screen" id="contact">
+      <div className="" id="contact">
         <Contact />
       </div>
     </div>

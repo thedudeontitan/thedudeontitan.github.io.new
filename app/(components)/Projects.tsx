@@ -23,7 +23,7 @@ const projects: project[] = [
     title: "Creative Dugout",
     description:
       "A Website I've built for Creative Dugout which will help their business reach more clients and grow their business.",
-    tools: ["TypeScript","NextJS","TailwindCSS"],
+    tools: ["TypeScript", "NextJS", "TailwindCSS"],
     github_link: "https://github.com/thedudeontitan/safe-gaurd",
     link: "https://github.com/thedudeontitan/safe-gaurd",
   },
@@ -75,7 +75,11 @@ export default function Projects() {
           </div>
           {projects.map((data) => (
             <div className="mt-14 flex flex-col w-full mb-5" key={data.key}>
-              <div className={` flex w-full ${data.key % 2 === 0 ? "justify-end ml-24" : ""}`}>
+              <div
+                className={` flex w-full ${
+                  data.key % 2 === 0 ? "justify-end ml-24" : ""
+                }`}
+              >
                 <Image
                   src={data.image_path}
                   alt="project"
@@ -142,10 +146,55 @@ export default function Projects() {
               </div>
             </div>
           ))}
+          <div className="hover:bg-[#66FCF1] w-fit rounded transition-all">
+            <Link href="#projects">
+              <button className="bg-[#0B0C10] border z-10 border-[#66FCF1] text-[#66FCF1] w-fit p-5 rounded hover:-translate-x-1 hover:-translate-y-1 transition-all">
+                Checkout My Work
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
-      <div className="flex lg:hidden">
-
+      <div className="flex lg:hidden mx-5">
+        <div className="mt-28 flex w-full items-center flex-col">
+          <span className="text-4xl font-semibold opacity-90 text-[#f3f3f3] mb-10">
+            Things I&apos;ve Built
+          </span>
+          <div className="flex flex-col gap-10">
+            {projects.map((info) => (
+              <div key={info.key} className="">
+                <div className="shadow-md shadow-[#232427] flex flex-col p-5 gap-y-5">
+                  <span className="font-mono text-[#66FCF1] text-sm">
+                    {info.type}
+                  </span>
+                  <span className="text-xl font-semibold opacity-80">{info.title}</span>
+                  <span className="text-[#f3f3f3] opacity-80">
+                    {info.description}
+                  </span>
+                  <div className="mt-5 text-sm text-left flex flex-row flex-wrap font-mono gap-2">
+                    {info.tools.map((tool) => (
+                      <span key={tool}>{tool}</span>
+                    ))}
+                  </div>
+                  <div className="flex flex-row text-2xl mt-4 mb-5 gap-x-5">
+                    <Link
+                      href="https://github.com/thedudeontitan/safe-gaurd"
+                      target="_blank"
+                    >
+                      <FiGithub className="hover:scale-110 hover:text-[#66FCF1] transition-all" />
+                    </Link>
+                    <Link
+                      href="https://github.com/thedudeontitan/safe-gaurd"
+                      target="_blank"
+                    >
+                      <FiExternalLink className="hover:scale-110 hover:text-[#66FCF1] transition-all" />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

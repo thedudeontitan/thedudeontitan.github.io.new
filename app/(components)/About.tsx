@@ -15,7 +15,7 @@ export default function About() {
 
   return (
     <section>
-      <div className="lg:mx-28 xl:mx-96 h-screen flex flex-col">
+      <div className="lg:mx-28 xl:mx-96 min-h-screen flex flex-col">
         <div className="mt-10 lg:mt-0 flex flex-row lg:gap-x-10 items-center justify-center lg:justify-normal mb-10 lg:mb-14">
           <span className="text-4xl font-semibold text-[#f3f3f3] opacity-90">
             About Me
