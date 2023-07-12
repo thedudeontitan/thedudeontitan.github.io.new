@@ -68,7 +68,7 @@ export default function Projects() {
       <div className="lg:flex w-full hidden">
         <div className="flex flex-col mx-2 lg:mx-24 xl:mx-96 w-full">
           <div className="mt-28 flex flex-row items-center gap-x-10">
-            <span className="text-3xl font-semibold opacity-90 text-[#f3f3f3] ">
+            <span className="text-4xl font-semibold opacity-90 text-[#f3f3f3] ">
               Things I&apos;ve Built
             </span>
             <div className="border-t w-80 lg:flex overflow-hidden border-[#353D47]" />

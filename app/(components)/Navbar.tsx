@@ -58,9 +58,13 @@ function Navbar() {
             <div className="text-[#f3f3f3]">Contact</div>
           </Link>
 
-          <Link href="/Resume.pdf" target="_blank" className="border border-[#66FCF1] text-[#66FCF1] text-sm font-medium py-2 px-4 rounded">
-            Resume
-          </Link>
+          <div className="hover:bg-[#66FCF1] w-fit rounded transition-all">
+              <Link href="/Resume.pdf" target="_blank">
+                <button className="bg-[#0B0C10] border z-10 border-[#66FCF1] text-[#66FCF1] w-fit py-2 px-4 rounded hover:-translate-x-1 hover:-translate-y-1 transition-all">
+                  Resume
+                </button>
+              </Link>
+            </div>
         </div>
       </nav>
     </div>

@@ -3,6 +3,8 @@ import About from "./(components)/About";
 import Experience from "./(components)/Experience";
 import Contact from "./(components)/Contact";
 import Projects from "./(components)/Projects";
+import Link from "next/link";
+
 
 export default function page() {
   return (
@@ -21,12 +23,14 @@ export default function page() {
               I&apos;m a Software Deveploper, I create immersive digital
               experiences through websties and mobile apps. I also work with
               Blockchain and Web3 Technologies. Currently Working as a{" "}
-              <span className="text-[#66FCF1]">Freelancer</span> .
+              <span className="text-[#66FCF1]">Freelancer</span>.
             </span>
             <div className="hover:bg-[#66FCF1] w-fit rounded transition-all">
-              <button className="bg-[#0B0C10] border z-10 border-[#66FCF1] text-[#66FCF1] w-fit p-5 rounded hover:-translate-x-1 hover:-translate-y-1 transition-all">
-                Checkout My Work
-              </button>
+              <Link href="#projects">
+                <button className="bg-[#0B0C10] border z-10 border-[#66FCF1] text-[#66FCF1] w-fit p-5 rounded hover:-translate-x-1 hover:-translate-y-1 transition-all">
+                  Checkout My Work
+                </button>
+              </Link>
             </div>
           </div>
         </div>
