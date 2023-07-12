@@ -48,27 +48,26 @@ export default function Experience() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-10">
             {jobs.map((info) => (
-              <div
-                key={info.key}
-                className="shadow-md flex flex-col gap-2 p-5 rounded-md shadow-[#232427] transition-all hover:scale-[1.02]"
-              >
-                <div className="inline-block font-mono font-medium">
-                  <span className="text-lg">{info.title}</span>
-                  <span className="text-lg text-[#66FCF1]">
-                    &nbsp;@{info.company_name}
+              <div key={info.key} className="hover:bg-[#66FCF1] rounded-md transition-all">
+                <div className="bg-[#0B0C10] shadow-md flex flex-col gap-2 p-5 rounded-md shadow-[#232427] h-full transition-all hover:-translate-x-2 hover:-translate-y-2">
+                  <div className="inline-block font-mono font-medium">
+                    <span className="text-lg">{info.title}</span>
+                    <span className="text-lg text-[#66FCF1]">
+                      &nbsp;@{info.company_name}
+                    </span>
+                  </div>
+                  <span className="opacity-80 font-mono mb-5">
+                    {info.duration}
                   </span>
+                  <ul className="list-none flex flex-col gap-y-2 opacity-80 text-[#f3f3f3]">
+                    {info.description.map((descrip) => (
+                      <li key={descrip} className="pl-2">
+                        <VscDebugBreakpointLogUnverified className="inline-block mr-2 text-[#66FCF1]" />
+                        {descrip}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <span className="opacity-80 font-mono mb-5">
-                  {info.duration}
-                </span>
-                <ul className="list-none flex flex-col gap-y-2 opacity-80 text-[#f3f3f3]">
-                  {info.description.map((descrip) => (
-                    <li key={descrip} className="pl-2">
-                      <VscDebugBreakpointLogUnverified className="inline-block mr-2 text-[#66FCF1]" />
-                      {descrip}
-                    </li>
-                  ))}
-                </ul>
               </div>
             ))}
           </div>

@@ -23,9 +23,11 @@ export default function page() {
               Blockchain and Web3 Technologies. Currently Working as a{" "}
               <span className="text-[#66FCF1]">Freelancer</span> .
             </span>
-            <button className="border border-[#66FCF1] text-[#66FCF1] w-fit p-5 rounded hover:scale-105 hover:shadow-md hover:shadow-[#66FCF1] transition-all">
-              Checkout My Work
-            </button>
+            <div className="hover:bg-[#66FCF1] w-fit rounded transition-all">
+              <button className="bg-[#0B0C10] border z-10 border-[#66FCF1] text-[#66FCF1] w-fit p-5 rounded hover:-translate-x-1 hover:-translate-y-1 transition-all">
+                Checkout My Work
+              </button>
+            </div>
           </div>
         </div>
       </div>

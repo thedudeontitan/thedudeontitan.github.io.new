@@ -45,7 +45,7 @@ const projects: project[] = [
     title: "Medico",
     description:
       "Forkscanner Website is a sophisticated tool designed to actively monitor the Bitcoin blockchain in real-time, providing users with valuable insights into the state of the network.",
-    tools: ["TypeScript", "ReactJS", "Solidity", "Polygon", "TailwindCSS"],
+    tools: ["JavaScript", "ReactJS", "Bitcoin ForkScanner"],
     github_link: "https://github.com/thedudeontitan/safe-gaurd",
     link: "https://github.com/thedudeontitan/safe-gaurd",
   },
@@ -56,7 +56,7 @@ const projects: project[] = [
     title: "Health Hive",
     description:
       "A mobile Application where users can scan the barcode on a packaged food and find out about all their harmfulness, Also analyse your recipes with the analyse tool.",
-    tools: ["TypeScript", "ReactJS", "Solidity", "Polygon", "TailwindCSS"],
+    tools: ["JavaScript", "React-Native"],
     github_link: "https://github.com/thedudeontitan/safe-gaurd",
     link: "https://github.com/thedudeontitan/safe-gaurd",
   },
