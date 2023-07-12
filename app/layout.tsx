@@ -47,6 +47,19 @@ export default function RootLayout({
             </div>
           </div>
         </main>
+        <footer className="bg-[#0B0C10]">
+          <div className="w-full flex flex-col items-center text-[#f3f3f3] font-mono text-sm">
+            <Link href="https://github.com/thedudeontitan/thedudeontitan.github.io.new" target="_blank" className="my-10 hover:text-[#66FCF1] hover:scale-[1.02] transition-all">
+              <div className="flex flex-col items-center gap-y-2">
+                <span>Built By Ankit Kokane</span>
+                <span className="flex flex-row items-center gap-x-2">
+                  <FiGithub />
+                  Github Repo
+                </span>
+              </div>
+            </Link>
+          </div>
+        </footer>
       </body>
     </html>
   );
