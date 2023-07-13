@@ -3,6 +3,8 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import Link from "next/link";
 import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
+import { Suspense } from "react";
+import Loading from "./loading";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,6 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Navbar />
+        <Suspense fallback={<Loading/>}>
         {children}
         <main>
           <div className="hidden lg:fixed lg:flex flex-row left-0 bottom-0 ml-14 text-white">
@@ -60,6 +63,7 @@ export default function RootLayout({
             </Link>
           </div>
         </footer>
+        </Suspense>
       </body>
     </html>
   );
