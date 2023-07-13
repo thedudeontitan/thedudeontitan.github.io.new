@@ -21,8 +21,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <Loading>
         <Navbar />
-        <Suspense fallback={<Loading/>}>
         {children}
         <main>
           <div className="hidden lg:fixed lg:flex flex-row left-0 bottom-0 ml-14 text-white">
@@ -63,7 +63,7 @@ export default function RootLayout({
             </Link>
           </div>
         </footer>
-        </Suspense>
+        </Loading>
       </body>
     </html>
   );
