@@ -17,10 +17,10 @@ export default function page() {
             <span className="text-5xl lg:text-7xl font-semibold text-[#f3f3f3] ">
               Ankit Kokane.
             </span>
-            <span className="text-4xl lg:text-6xl font-semibold text-[#f3f3f3] opacity-70">
+            <span className="text-4xl lg:text-6xl font-semibold text-[#f3f3f3] text-opacity-70">
               I build things for Web and Mobile.
             </span>
-            <span className="text-lg lg:text-xl lg:w-1/2 my-5 text-[#f3f3f3] opacity-70">
+            <span className="text-lg lg:text-xl lg:w-1/2 my-5 text-[#f3f3f3] text-opacity-70">
               I&apos;m a Software Deveploper, I create immersive digital
               experiences through websties and mobile apps. I also work with
               Blockchain and Web3 Technologies. Currently Working as a{" "}
