@@ -25,7 +25,7 @@ export default function About() {
             <div className="border-t hidden lg:flex w-80 border-[#353D47]" />
           </div>
         </Reveal>
-        <div className="flex flex-col-reverse lg:flex-row lg:justify-between items-center w-full lg:gap-x-20">
+        <div className="flex flex-col-reverse lg:flex-row lg:justify-between items-center lg:w-full lg:gap-x-20">
           <div className="my-auto mx-5 lg:mx-0 lg:w-2/3 mt-10 lg:mt-0">
             <div className="flex flex-col gap-y-4 text-lg opacity-70">
               <Reveal side="left">
@@ -63,7 +63,7 @@ export default function About() {
               </Reveal>
             </div>
             <Reveal side="left">
-              <div className="grid grid-cols-2 gap-y-2 gap-x-10 text-base mt-5">
+              <div className="grid grid-cols-2 gap-y-2 gap-x-6 text-base mt-5">
                 <span className="text-[#66FCF1] flex flex-row items-center gap-2">
                   <VscDebugBreakpointLogUnverified />
                   TypeScript | JavaScript
@@ -101,7 +101,7 @@ export default function About() {
           </div>
           <Reveal side="right">
             <div
-              className={` border-2 border-[#66FCF1] rounded h-fit w-fit my-auto transition-all ${
+              className={`ml-5 mt-5 border-2 border-[#66FCF1] rounded h-fit w-fit lg:my-auto transition-all ${
                 isHovered ? "translate-x-1 translate-y-1" : ""
               }`}
             >

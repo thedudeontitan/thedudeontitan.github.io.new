@@ -11,6 +11,7 @@ interface Props {
 export const Reveal = ({ children, width = "fit-content", side }: Props) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
+  const isMobile = window.innerWidth <= 768;
 
   const mainControls = useAnimation();
 
@@ -22,7 +23,7 @@ export const Reveal = ({ children, width = "fit-content", side }: Props) => {
 
   if (side === "up") {
     return (
-      <div ref={ref} style={{ position: "relative", width }}>
+      <div ref={ref} style={{ position: "relative", width, overflow: isMobile ? 'hidden' : 'visible' }}>
         <motion.div
           variants={{
             hidden: { opacity: 0, y: 75 },
@@ -40,7 +41,7 @@ export const Reveal = ({ children, width = "fit-content", side }: Props) => {
 
   if (side === "left") {
     return (
-      <div ref={ref} style={{ position: "relative", width }}>
+      <div ref={ref} style={{ position: "relative", width, overflow: isMobile ? 'hidden' : 'visible' }}>
         <motion.div
           variants={{
             hidden: { opacity: 0, x: -75 },
@@ -58,7 +59,7 @@ export const Reveal = ({ children, width = "fit-content", side }: Props) => {
 
   if (side === "right") {
     return (
-      <div ref={ref} style={{ position: "relative", width }}>
+      <div ref={ref} style={{ position: "relative", width, overflow: isMobile ? 'hidden' : 'visible' }}>
         <motion.div
           variants={{
             hidden: { opacity: 0, x: 75 },

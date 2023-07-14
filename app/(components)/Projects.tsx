@@ -87,7 +87,7 @@ export default function Projects() {
                       alt="project"
                       width={600}
                       height={600}
-                      className={` ${data.key % 2 === 0 ? "" : ""}`}
+                      className={` ${data.key % 2 === 0 ? "ml-44" : "ml-10"}`}
                     ></Image>
                   </div>
                   <div
