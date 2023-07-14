@@ -91,10 +91,34 @@ function Navbar() {
               }`}
             >
               <div className="flex flex-col text-lg gap-y-5 mt-28 font-mono mx-5">
-                <Link href="#about" className="p-5" onClick={()=>setNavOpen(false)}>About</Link>
-                <Link href="#experience" className="p-5" onClick={()=>setNavOpen(false)}>Experience</Link>
-                <Link href="#projects" className="p-5" onClick={()=>setNavOpen(false)}>Projects</Link>
-                <Link href="#contact" className="p-5" onClick={()=>setNavOpen(false)}>Contact</Link>
+                <Link
+                  href="#about"
+                  className="p-5"
+                  onClick={() => setNavOpen(false)}
+                >
+                  About
+                </Link>
+                <Link
+                  href="#experience"
+                  className="p-5"
+                  onClick={() => setNavOpen(false)}
+                >
+                  Experience
+                </Link>
+                <Link
+                  href="#projects"
+                  className="p-5"
+                  onClick={() => setNavOpen(false)}
+                >
+                  Projects
+                </Link>
+                <Link
+                  href="#contact"
+                  className="p-5"
+                  onClick={() => setNavOpen(false)}
+                >
+                  Contact
+                </Link>
                 <div className="hover:bg-[#66FCF1] w-fit rounded transition-all mx-5">
                   <Link href="/Resume.pdf" target="_blank">
                     <button className="bg-[#232427] border z-10 border-[#66FCF1] text-[#66FCF1] w-fit py-2 px-4 rounded hover:-translate-x-1 hover:-translate-y-1 transition-all">

@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 import Link from "next/link";
-import { info } from "console";
+import { Reveal } from "../framer-motion/Reveal";
 
 interface project {
   key: number;
@@ -74,85 +74,82 @@ export default function Projects() {
             <div className="border-t w-80 lg:flex overflow-hidden border-[#353D47]" />
           </div>
           {projects.map((data) => (
-            <div className="mt-14 flex flex-col w-full mb-5" key={data.key}>
-              <div
-                className={` flex w-full ${
-                  data.key % 2 === 0 ? "justify-end ml-24" : ""
-                }`}
-              >
-                <Image
-                  src={data.image_path}
-                  alt="project"
-                  width={600}
-                  height={600}
-                  className={` ${data.key % 2 === 0 ? "" : ""}`}
-                ></Image>
-              </div>
-              <div
-                className={`absolute z-10 flex flex-col text-right ${
-                  data.key % 2 === 0 ? "" : "ml-[65vh]"
-                }`}
-              >
-                <div className={`flex flex-col `}>
-                  <span
-                    className={`font-mono text-[#66FCF1] text-sm ${
-                      data.key % 2 === 0 ? "text-left" : ""
+            <div key={data.key}>
+              <Reveal side={`${data.key % 2 === 0 ? "right" : "left"}`}>
+                <div className="mt-14 flex flex-col w-full mb-5">
+                  <div
+                    className={` flex w-full ${
+                      data.key % 2 === 0 ? "justify-end ml-24" : ""
                     }`}
                   >
-                    {data.type}
-                  </span>
-                  <span
-                    className={`text-[#f3f3f3] font-semibold text-2xl mt-2 ${
-                      data.key % 2 === 0 ? "text-left" : ""
+                    <Image
+                      src={data.image_path}
+                      alt="project"
+                      width={600}
+                      height={600}
+                      className={` ${data.key % 2 === 0 ? "" : ""}`}
+                    ></Image>
+                  </div>
+                  <div
+                    className={`absolute z-10 flex flex-col text-right ${
+                      data.key % 2 === 0 ? "" : "ml-[65vh]"
                     }`}
                   >
-                    {data.title}
-                  </span>
-                </div>
-                <div
-                  className={` mt-8 text-left rounded p-8 bg-[#15171f] w-[52vh] shadow-md shadow-[#15171f] hover:shadow-lg hover:shadow-[#15171f] transition-all ${
-                    data.key % 2 === 0 ? "" : "ml-10"
-                  }`}
-                >
-                  <span className="text-[#f3f3f3] opacity-80">
-                    {data.description}
-                  </span>
-                </div>
-                <div
-                  className={`flex flex-col ${
-                    data.key % 2 === 0 ? "items-start" : ""
-                  }`}
-                >
-                  <div className="mt-5 text-sm flex flex-row justify-end font-mono gap-x-2">
-                    {data.tools.map((tool) => (
-                      <span key={tool}>{tool}</span>
-                    ))}
-                  </div>
-                  <div className="flex flex-row justify-end text-2xl mt-4 gap-x-5">
-                    <Link
-                      href="https://github.com/thedudeontitan/safe-gaurd"
-                      target="_blank"
+                    <div className={`flex flex-col `}>
+                      <span
+                        className={`font-mono text-[#66FCF1] text-sm ${
+                          data.key % 2 === 0 ? "text-left" : ""
+                        }`}
+                      >
+                        {data.type}
+                      </span>
+                      <span
+                        className={`text-[#f3f3f3] font-semibold text-2xl mt-2 ${
+                          data.key % 2 === 0 ? "text-left" : ""
+                        }`}
+                      >
+                        {data.title}
+                      </span>
+                    </div>
+                    <div
+                      className={` mt-8 text-left rounded p-8 bg-[#15171f] w-[52vh] shadow-md shadow-[#15171f] hover:shadow-lg hover:shadow-[#15171f] transition-all ${
+                        data.key % 2 === 0 ? "" : "ml-10"
+                      }`}
                     >
-                      <FiGithub className="hover:scale-110 hover:text-[#66FCF1] transition-all" />
-                    </Link>
-                    <Link
-                      href="https://github.com/thedudeontitan/safe-gaurd"
-                      target="_blank"
+                      <span className="text-[#f3f3f3] opacity-80">
+                        {data.description}
+                      </span>
+                    </div>
+                    <div
+                      className={`flex flex-col ${
+                        data.key % 2 === 0 ? "items-start" : ""
+                      }`}
                     >
-                      <FiExternalLink className="hover:scale-110 hover:text-[#66FCF1] transition-all" />
-                    </Link>
+                      <div className="mt-5 text-sm flex flex-row justify-end font-mono gap-x-2">
+                        {data.tools.map((tool) => (
+                          <span key={tool}>{tool}</span>
+                        ))}
+                      </div>
+                      <div className="flex flex-row justify-end text-2xl mt-4 gap-x-5">
+                        <Link
+                          href="https://github.com/thedudeontitan/safe-gaurd"
+                          target="_blank"
+                        >
+                          <FiGithub className="hover:scale-110 hover:text-[#66FCF1] transition-all" />
+                        </Link>
+                        <Link
+                          href="https://github.com/thedudeontitan/safe-gaurd"
+                          target="_blank"
+                        >
+                          <FiExternalLink className="hover:scale-110 hover:text-[#66FCF1] transition-all" />
+                        </Link>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Reveal>
             </div>
           ))}
-          <div className="hover:bg-[#66FCF1] w-fit rounded transition-all">
-            <Link href="#projects">
-              <button className="bg-[#0B0C10] border z-10 border-[#66FCF1] text-[#66FCF1] w-fit p-5 rounded hover:-translate-x-1 hover:-translate-y-1 transition-all">
-                Checkout My Work
-              </button>
-            </Link>
-          </div>
         </div>
       </div>
       <div className="flex lg:hidden mx-5">
@@ -163,38 +160,51 @@ export default function Projects() {
           <div className="flex flex-col gap-10">
             {projects.map((info) => (
               <div key={info.key} className="">
-                <div className="shadow-md shadow-[#232427] flex flex-col p-5 gap-y-5">
-                  <span className="font-mono text-[#66FCF1] text-sm">
-                    {info.type}
-                  </span>
-                  <span className="text-xl font-semibold opacity-80">{info.title}</span>
-                  <span className="text-[#f3f3f3] opacity-80">
-                    {info.description}
-                  </span>
-                  <div className="mt-5 text-sm text-left flex flex-row flex-wrap font-mono gap-2">
-                    {info.tools.map((tool) => (
-                      <span key={tool}>{tool}</span>
-                    ))}
+                <Reveal side={`${info.key % 2 === 0 ? "right" : "left"}`}>
+                  <div className="shadow-md shadow-[#232427] flex flex-col p-5 gap-y-5">
+                    <span className="font-mono text-[#66FCF1] text-sm">
+                      {info.type}
+                    </span>
+                    <span className="text-xl font-semibold opacity-80">
+                      {info.title}
+                    </span>
+                    <span className="text-[#f3f3f3] opacity-80">
+                      {info.description}
+                    </span>
+                    <div className="mt-5 text-sm text-left flex flex-row flex-wrap font-mono gap-2">
+                      {info.tools.map((tool) => (
+                        <span key={tool}>{tool}</span>
+                      ))}
+                    </div>
+                    <div className="flex flex-row text-2xl mt-4 mb-5 gap-x-5">
+                      <Link
+                        href="https://github.com/thedudeontitan/safe-gaurd"
+                        target="_blank"
+                      >
+                        <FiGithub className="hover:scale-110 hover:text-[#66FCF1] transition-all" />
+                      </Link>
+                      <Link
+                        href="https://github.com/thedudeontitan/safe-gaurd"
+                        target="_blank"
+                      >
+                        <FiExternalLink className="hover:scale-110 hover:text-[#66FCF1] transition-all" />
+                      </Link>
+                    </div>
                   </div>
-                  <div className="flex flex-row text-2xl mt-4 mb-5 gap-x-5">
-                    <Link
-                      href="https://github.com/thedudeontitan/safe-gaurd"
-                      target="_blank"
-                    >
-                      <FiGithub className="hover:scale-110 hover:text-[#66FCF1] transition-all" />
-                    </Link>
-                    <Link
-                      href="https://github.com/thedudeontitan/safe-gaurd"
-                      target="_blank"
-                    >
-                      <FiExternalLink className="hover:scale-110 hover:text-[#66FCF1] transition-all" />
-                    </Link>
-                  </div>
-                </div>
+                </Reveal>
               </div>
             ))}
           </div>
         </div>
+      </div>
+      <div className="hover:bg-[#66FCF1] w-fit rounded transition-all mx-auto mt-10">
+        <Reveal side="up">
+          <Link href="https:github.com/thedudeontitan" target="_blank">
+            <button className="bg-[#0B0C10] border z-10 border-[#66FCF1] text-[#66FCF1] w-fit p-5 rounded hover:-translate-x-1 hover:-translate-y-1 transition-all">
+              Check Out My Other Work
+            </button>
+          </Link>
+        </Reveal>
       </div>
     </section>
   );

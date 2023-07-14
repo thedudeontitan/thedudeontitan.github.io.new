@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { VscDebugBreakpointLogUnverified } from "react-icons/vsc";
+import { Reveal } from "../framer-motion/Reveal";
 
 export default function About() {
   const [isHovered, setIsHovered] = useState(false);
@@ -15,92 +16,108 @@ export default function About() {
 
   return (
     <section>
-      <div className="lg:mx-28 xl:mx-96 min-h-screen flex flex-col">
-        <div className="mt-10 lg:mt-0 flex flex-row lg:gap-x-10 items-center justify-center lg:justify-normal mb-10 lg:mb-14">
-          <span className="text-4xl font-semibold text-[#f3f3f3] opacity-90">
-            About Me
-          </span>
-          <div className="border-t hidden lg:flex w-80 border-[#353D47]" />
-        </div>
-        <div className="flex flex-col-reverse lg:flex-row lg:justify-between items-center  w-full lg:gap-x-20">
+      <div className="lg:mx-28 xl:mx-96 min-h-screen flex flex-col items-center lg:items-start">
+        <Reveal side="up">
+          <div className="mt-10 lg:mt-20 flex flex-row lg:gap-x-10 items-center justify-center lg:justify-normal mb-10 lg:mb-14">
+            <span className="text-4xl font-semibold text-[#f3f3f3] opacity-90">
+              About Me
+            </span>
+            <div className="border-t hidden lg:flex w-80 border-[#353D47]" />
+          </div>
+        </Reveal>
+        <div className="flex flex-col-reverse lg:flex-row lg:justify-between items-center w-full lg:gap-x-20">
           <div className="my-auto mx-5 lg:mx-0 lg:w-2/3 mt-10 lg:mt-0">
             <div className="flex flex-col gap-y-4 text-lg opacity-70">
-              <span className="">
-                Hello, I am Ankit Kokane and I enjoy creating software. I have
-                been creating websites for over 4 years.
-              </span>
-              <span>
-                I am currently in second year of my Computer Engineering in
-                Pune, India. I work as a Freelance Web, Mobile and Python
-                Automantion Developer. I have also worked as a Fullstack Web
-                Developer.
-              </span>
-              <span>
-                I have also won over five Internation hackathons, The most
-                prominent one being Massachusetts Institute Of Technology
-                Bitcoin Hackathon where I secured the First Prize.
-              </span>
-              <span>
-                Currently I am actively contributing to various open source
-                projects.
-              </span>
-              <span>
-                Here are a few technologies I&apos;ve been working with
-                recently:
-              </span>
+              <Reveal side="left">
+                <span>
+                  Hello, I am Ankit Kokane and I enjoy creating software. I have
+                  been creating websites for over 4 years.
+                </span>
+              </Reveal>
+              <Reveal side="left">
+                <span>
+                  I am currently in second year of my Computer Engineering in
+                  Pune, India. I work as a Freelance Web, Mobile and Python
+                  Automantion Developer. I have also worked as a Fullstack Web
+                  Developer.
+                </span>
+              </Reveal>
+              <Reveal side="left">
+                <span>
+                  I have also won over five Internation hackathons, The most
+                  prominent one being Massachusetts Institute Of Technology
+                  Bitcoin Hackathon where I secured the First Prize.
+                </span>
+              </Reveal>
+              <Reveal side="left">
+                <span>
+                  Currently I am actively contributing to various open source
+                  projects.
+                </span>
+              </Reveal>
+              <Reveal side="left">
+                <span>
+                  Here are a few technologies I&apos;ve been working with
+                  recently:
+                </span>
+              </Reveal>
             </div>
-            <div className="grid grid-cols-2 gap-y-2 text-base mt-5">
-              <span className="text-[#66FCF1] flex flex-row items-center gap-2">
-                <VscDebugBreakpointLogUnverified />
-                TypeScript | JavaScript
-              </span>
-              <span className="text-[#66FCF1] flex flex-row items-center gap-2">
-                <VscDebugBreakpointLogUnverified />
-                NextJS | ReactJS
-              </span>
-              <span className="text-[#66FCF1] flex flex-row items-center gap-2">
-                <VscDebugBreakpointLogUnverified />
-                Python
-              </span>
-              <span className="text-[#66FCF1] flex flex-row items-center gap-2">
-                <VscDebugBreakpointLogUnverified />
-                Django
-              </span>
-              <span className="text-[#66FCF1] flex flex-row items-center gap-2">
-                <VscDebugBreakpointLogUnverified />
-                Flutter
-              </span>
-              <span className="text-[#66FCF1] flex flex-row items-center gap-2">
-                <VscDebugBreakpointLogUnverified />
-                React Native
-              </span>
-              <span className="text-[#66FCF1] flex flex-row items-center gap-2">
-                <VscDebugBreakpointLogUnverified />
-                Postgres | MySQL | SQLite
-              </span>
-              <span className="text-[#66FCF1] flex flex-row items-center gap-2">
-                <VscDebugBreakpointLogUnverified />
-                Ethereum | Solidity
-              </span>
-            </div>
+            <Reveal side="left">
+              <div className="grid grid-cols-2 gap-y-2 gap-x-10 text-base mt-5">
+                <span className="text-[#66FCF1] flex flex-row items-center gap-2">
+                  <VscDebugBreakpointLogUnverified />
+                  TypeScript | JavaScript
+                </span>
+                <span className="text-[#66FCF1] flex flex-row items-center gap-2">
+                  <VscDebugBreakpointLogUnverified />
+                  NextJS | ReactJS
+                </span>
+                <span className="text-[#66FCF1] flex flex-row items-center gap-2">
+                  <VscDebugBreakpointLogUnverified />
+                  Python
+                </span>
+                <span className="text-[#66FCF1] flex flex-row items-center gap-2">
+                  <VscDebugBreakpointLogUnverified />
+                  Django
+                </span>
+                <span className="text-[#66FCF1] flex flex-row items-center gap-2">
+                  <VscDebugBreakpointLogUnverified />
+                  Flutter
+                </span>
+                <span className="text-[#66FCF1] flex flex-row items-center gap-2">
+                  <VscDebugBreakpointLogUnverified />
+                  React Native
+                </span>
+                <span className="text-[#66FCF1] flex flex-row items-center gap-2">
+                  <VscDebugBreakpointLogUnverified />
+                  Postgres | MySQL | SQLite
+                </span>
+                <span className="text-[#66FCF1] flex flex-row items-center gap-2">
+                  <VscDebugBreakpointLogUnverified />
+                  Ethereum | Solidity
+                </span>
+              </div>
+            </Reveal>
           </div>
-          <div
-            className={` border-2 border-[#66FCF1] rounded h-fit w-fit my-auto transition-all ${
-              isHovered ? "translate-x-1 translate-y-1" : ""
-            }`}
-          >
-            <Image
-              src="/assets/pfp.png"
-              alt="image"
-              width={300}
-              height={300}
-              className={`-translate-x-4 -translate-y-4 rounded transition-all ${
-                isHovered ? "hover:-translate-x-6 hover:-translate-y-6" : ""
+          <Reveal side="right">
+            <div
+              className={` border-2 border-[#66FCF1] rounded h-fit w-fit my-auto transition-all ${
+                isHovered ? "translate-x-1 translate-y-1" : ""
               }`}
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-            />
-          </div>
+            >
+              <Image
+                src="/assets/pfp.png"
+                alt="image"
+                width={300}
+                height={300}
+                className={`-translate-x-4 -translate-y-4 rounded transition-all ${
+                  isHovered ? "hover:-translate-x-6 hover:-translate-y-6" : ""
+                }`}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+              />
+            </div>
+          </Reveal>
         </div>
       </div>
     </section>
