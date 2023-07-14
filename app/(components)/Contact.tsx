@@ -17,7 +17,7 @@ export default function Contact() {
             <span className="lg:text-xl text-lg lg:w-[80vh] text-center font-medium opacity-75">
               I am always looking for new opportunities to work with
               professionals and companies. I would also like to contirbute to
-              opensource porjects providing real world value.
+              opensource projects providing real world value.
             </span>
             <div className="hover:bg-[#66FCF1] w-fit rounded transition-all my-10">
               <Link href="mailto:ankitkokane77@gmail.com">
