@@ -19,6 +19,7 @@ const jobs: job[] = [
     description: [
       "Designed and Developed OSINT Website for this start up.",
       "Collaborated with other developers to create an OSINT eco-system.",
+      "Developed a management admin panel(website) for their IOT device.",
       "Built and Deployed the software according to the needs of the stakeholders.",
       "Tools Used: JavaScript, Python, ReactJS, Django, TailwindCSS, SQLite.",
     ],
@@ -36,6 +37,18 @@ const jobs: job[] = [
       "Tools for Automation: Python, Selium, BeautifulSoup",
     ],
   },
+  {
+    key: 3,
+    title: "Google DSC Lead",
+    company_name: "Google DSC",
+    duration: "Aug 2023 to Present",
+    description: [
+      "Leading a group of passionate developers to build projects and to organize various sessions.",
+      "Building a large tech community of developers and students to share knowledge and experience.",
+      "Teaching students about various technologies and sharing my experience throughout my developer journey.",
+      "Talking about OpenSource, Cloud, Blockchain and Web Developement."
+    ],
+  },
 ];
 
 export default function Experience() {
@@ -48,13 +61,13 @@ export default function Experience() {
               Experience
             </span>
           </Reveal>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 justify-center mx-auto">
             {jobs.map((info) => (
-              <div key={info.key} className="h-full">
+              <div key={info.key} className="lg:h-full flex">
                 <Reveal side={`${info.key%2===0?"right":"left"}`}>
-                  <div className="hover:bg-[#66FCF1] rounded-md transition-all mt-10 lg:h-[50vh] flex">
+                  <div className="hover:bg-[#66FCF1] rounded-md transition-all mt-10 h-[62vh] flex">
                     <div className="bg-[#0B0C10] shadow-md flex flex-col gap-2 p-5 rounded-md shadow-[#232427] h-full transition-all hover:-translate-x-2 hover:-translate-y-2">
-                      <div className="inline-block font-mono font-medium">
+                      <div className="flex flex-col font-mono font-medium">
                         <span className="text-lg">{info.title}</span>
                         <span className="text-lg text-[#66FCF1]">
                           &nbsp;@{info.company_name}
