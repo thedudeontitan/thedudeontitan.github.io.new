@@ -13,6 +13,18 @@ interface job {
 const jobs: job[] = [
   {
     key: 1,
+    title: "Linux Kernel Developer",
+    company_name: "LFX Mentorship '23 at Linux",
+    duration: "Sept 2023 to Oct 2023",
+    description: [
+      "LFX mentorship is a prestigious 3 month open-source program offered by The Linux Foundation.",
+      "Contributing to the Linux Kernel which is used by millions of people and companies.",
+      "Solving Bugs and Issues in the Linux Kernel.",
+      "Tools Used: C, C++, Linux kernel, Git",
+    ],
+  },
+  {
+    key: 1,
     title: "Fullstack Web Developer",
     company_name: "7 Darter Info Service",
     duration: "Oct 2022 to Feb 2023",
