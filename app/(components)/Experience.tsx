@@ -13,6 +13,18 @@ interface job {
 const jobs: job[] = [
   {
     key: 1,
+    title: "SDE Intern",
+    company_name: "DOI Soft Tech Pvt Ltd.",
+    duration: "Oct 2023 to Dec 2023",
+    description: [
+      "I worked on their social media app and website.",
+      "Collaborated with the team to create beautiful web experiences.",
+      "Worked on Website's Frontend Backend with MERN stack and their Mobile App.",
+      "Tools Used: ReactJS, NodeJS, Express, MongoDB, React Native",
+    ],
+  },
+  {
+    key: 1,
     title: "Linux Kernel Developer",
     company_name: "LFX Mentorship '23 at Linux",
     duration: "Sept 2023 to Oct 2023",

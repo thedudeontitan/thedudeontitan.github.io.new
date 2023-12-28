@@ -36,17 +36,15 @@ export default function About() {
               </Reveal>
               <Reveal side="left">
                 <span>
-                  I am currently in second year of my Computer Engineering in
+                  I am currently in third year of my Computer Engineering in
                   Pune, India. I work as a Freelance Web, Mobile and Python
-                  Automantion Developer. I have also worked as a Fullstack Web
+                  Automantion Developer. I have also worked as a SDE Intern and Fullstack Web
                   Developer.
                 </span>
               </Reveal>
               <Reveal side="left">
                 <span>
-                  I have also won over five Internation hackathons, The most
-                  prominent one being Massachusetts Institute Of Technology
-                  Bitcoin Hackathon where I secured the First Prize.
+                  I am a serial hacker and have won several Internation hackathons, Recently I have won ETHIndia 23, Unfold 23, Chainlink Constellation and Massachusetts Institute Of Technology Hackathon.
                 </span>
               </Reveal>
               <Reveal side="left">
@@ -101,18 +99,16 @@ export default function About() {
           </div>
           <Reveal side="right">
             <div
-              className={`ml-5 mt-5 border-2 border-[#66FCF1] rounded h-fit w-fit lg:my-auto transition-all ${
-                isHovered ? "translate-x-1 translate-y-1" : ""
-              }`}
+              className={`ml-5 mt-5 border-2 border-[#66FCF1] rounded h-fit w-fit lg:my-auto transition-all ${isHovered ? "translate-x-1 translate-y-1" : ""
+                }`}
             >
               <Image
                 src="/assets/pfp.png"
                 alt="image"
                 width={300}
                 height={300}
-                className={`-translate-x-4 -translate-y-4 rounded transition-all ${
-                  isHovered ? "hover:-translate-x-6 hover:-translate-y-6" : ""
-                }`}
+                className={`-translate-x-4 -translate-y-4 rounded transition-all ${isHovered ? "hover:-translate-x-6 hover:-translate-y-6" : ""
+                  }`}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               />
