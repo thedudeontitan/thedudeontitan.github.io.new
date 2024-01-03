@@ -23,9 +23,9 @@ export default function RootLayout({
       <body className={inter.className}>
         <Loading>
         <Navbar />
+        <main className="overflow-hidden">
         {children}
-        <main>
-          <div className="hidden lg:fixed lg:flex flex-row left-0 bottom-0 ml-14 text-white">
+          <div className="hidden lg:fixed lg:flex flex-row left-0 bottom-0 lg:ml-14 text-white">
             <div className="text-2xl flex flex-col items-center gap-y-5">
               <Link href="https://github.com/thedudeontitan">
                 <FiGithub className="hover:scale-125 transition-all duration-500 hover:text-[#66FCF1]" />

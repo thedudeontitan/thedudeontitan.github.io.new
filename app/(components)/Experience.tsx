@@ -89,7 +89,7 @@ export default function Experience() {
             {jobs.map((info) => (
               <div key={info.key} className="lg:h-full flex">
                 <Reveal side={`${info.key%2===0?"right":"left"}`}>
-                  <div className="hover:bg-[#66FCF1] rounded-md transition-all mt-10 h-[62vh] flex">
+                  <div className="hover:bg-[#66FCF1] rounded-md transition-all mt-10 lg:h-[62vh] flex">
                     <div className="bg-[#0B0C10] shadow-md flex flex-col gap-2 p-5 rounded-md shadow-[#232427] h-full transition-all hover:-translate-x-2 hover:-translate-y-2">
                       <div className="flex flex-col font-mono font-medium">
                         <span className="text-lg">{info.title}</span>
