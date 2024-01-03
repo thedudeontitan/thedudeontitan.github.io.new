@@ -25,7 +25,7 @@ const projects: project[] = [
       "Website and Private Blockchain built at ChainLink Hackathon. To provide Decentralized and secure firmware updates.",
     tools: ["TypeScript", "NextJS", "TailwindCSS"],
     github_link: "https://github.com/Hyper-Updates/hyper_updates_frontend",
-    link: "https://github.com/Hyper-Updates/hyper_updates_frontend",
+    link: "https://hyper-updates.vercel.app/",
   },
   {
     key: 2,
@@ -35,8 +35,8 @@ const projects: project[] = [
     description:
       "A Website I've built for Creative Dugout which will help their business reach more clients and grow their business.",
     tools: ["TypeScript", "NextJS", "TailwindCSS"],
-    github_link: "https://github.com/thedudeontitan/safe-gaurd",
-    link: "https://github.com/thedudeontitan/safe-gaurd",
+    github_link: "https://github.com/thedudeontitan/",
+    link: "https://creative-dogout-website.vercel.app/",
   },
   {
     key: 3,
