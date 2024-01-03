@@ -18,6 +18,17 @@ interface project {
 const projects: project[] = [
   {
     key: 1,
+    image_path: "/assets/project6.png",
+    type: "Private Blockchain and Website",
+    title: "Hyper Updates",
+    description:
+      "Website and Private Blockchain built at ChainLink Hackathon. To provide Decentralized and secure firmware updates.",
+    tools: ["TypeScript", "NextJS", "TailwindCSS"],
+    github_link: "https://github.com/Hyper-Updates/hyper_updates_frontend",
+    link: "https://github.com/Hyper-Updates/hyper_updates_frontend",
+  },
+  {
+    key: 2,
     image_path: "/assets/project1.png",
     type: "Web App",
     title: "Creative Dugout",
@@ -28,7 +39,7 @@ const projects: project[] = [
     link: "https://github.com/thedudeontitan/safe-gaurd",
   },
   {
-    key: 2,
+    key: 3,
     image_path: "/assets/project2.png",
     type: "Web App",
     title: "Safe Gaurd",
@@ -39,7 +50,7 @@ const projects: project[] = [
     link: "https://github.com/thedudeontitan/safe-gaurd",
   },
   {
-    key: 3,
+    key: 4,
     image_path: "/assets/project5.png",
     type: "Web App",
     title: "Medico",
@@ -50,7 +61,7 @@ const projects: project[] = [
     link: "https://github.com/thedudeontitan/safe-gaurd",
   },
   {
-    key: 4,
+    key: 5,
     image_path: "/assets/project4.png",
     type: "Mobile App",
     title: "Health Hive",
