@@ -10,7 +10,7 @@ import { Reveal } from "./framer-motion/Reveal";
 import GLOBE from "vanta/src/vanta.globe";
 import * as THREE from "three";
 
-export default function page() {
+export default function Page() {
   const [vantaEffect, setVantaEffect] = useState(0);
 	const vantaRef = useRef(null);
 
@@ -47,7 +47,7 @@ export default function page() {
               </span>
             </Reveal>
             <Reveal side="up">
-              <span className="text-5xl lg:text-7xl font-semibold text-white ">
+              <span className="text-5xl lg:text-7xl font-bold text-white tracking-wider">
                 Ankit Kokane.
               </span>
             </Reveal>
@@ -68,9 +68,9 @@ export default function page() {
             </div> */}
             <Reveal side="up">
               <div className="hover:bg-[#66FCF1] w-fit rounded transition-all">
-                <Link href="#projects">
+                <Link href="https://docs.google.com/document/d/1_40BOE1B-5jpTZuXItFlf1SOA98PuWMPaWzvgUYLFxQ/edit?usp=sharing" target="_blank">
                   <button className="bg-[#0B0C10] text-sm lg:text-base border z-10 border-[#66FCF1] text-[#66FCF1] w-fit p-5 rounded hover:-translate-x-1 hover:-translate-y-1 transition-all">
-                    Checkout My Work
+                    Resume
                   </button>
                 </Link>
               </div>
