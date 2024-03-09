@@ -1,16 +1,45 @@
-import React from "react";
+"use client"
+
+import React, { useEffect, useRef, useState } from "react";
 import About from "./(components)/About";
 import Experience from "./(components)/Experience";
 import Contact from "./(components)/Contact";
 import Projects from "./(components)/Projects";
 import Link from "next/link";
 import { Reveal } from "./framer-motion/Reveal";
+import GLOBE from "vanta/src/vanta.globe";
+import * as THREE from "three";
 
 export default function page() {
+  const [vantaEffect, setVantaEffect] = useState(0);
+	const vantaRef = useRef(null);
+
+	useEffect(() => {
+		if (!vantaEffect) {
+			setVantaEffect(
+				GLOBE({
+					el: vantaRef.current,
+					THREE: THREE,
+					mouseControls: true,
+					touchControls: true,
+					gyroControls: false,
+					minHeight: 200.0,
+					minWidth: 200.0,
+					scale: 1.0,
+					scaleMobile: 1.0,
+					color: 0x66FCF1,
+					backgroundColor: 0x0B0C10,
+          size: 1.0
+				})
+			);
+		}
+	}, [vantaEffect]);
   return (
     <div className="bg-[#0B0C10] text-white">
-      <div className="min-h-screen">
-        <div className="mx-5 lg:ml-80 flex min-h-screen">
+      <div
+			className='bg-[#0B0C10] min-h-screen w-full flex flex-col justify-center items-start'
+			ref={vantaRef}>
+        <div className="backdrop-blur-[2px] lg:backdrop-blur-[1px] w-full px-5 lg:pl-24 xl:pl-32 flex min-h-screen">
           <div className="flex flex-col gap-y-5 my-auto">
             <Reveal side="up">
               <span className="text-lg lg:text-xl text-[#66FCF1]">
@@ -18,16 +47,16 @@ export default function page() {
               </span>
             </Reveal>
             <Reveal side="up">
-              <span className="text-5xl lg:text-7xl font-semibold text-[#f3f3f3] ">
+              <span className="text-5xl lg:text-7xl font-semibold text-white ">
                 Ankit Kokane.
               </span>
             </Reveal>
             <Reveal side="up">
-              <span className="text-4xl lg:text-6xl font-semibold text-[#f3f3f3] text-opacity-70">
+              <span className="text-4xl lg:text-6xl font-semibold text-[#d7d7d7] ">
                 I build things for Web and Mobile.
               </span>
             </Reveal>
-            <div className=" lg:w-1/2 my-5">
+            {/* <div className=" lg:w-1/2 my-5">
               <Reveal side="up">
                 <span className="text-lg lg:text-xl text-[#f3f3f3] text-opacity-70">
                   I&apos;m a Software Deveploper, I create immersive digital
@@ -36,7 +65,7 @@ export default function page() {
                   <span className="text-[#66FCF1]">Freelancer</span>.
                 </span>
               </Reveal>
-            </div>
+            </div> */}
             <Reveal side="up">
               <div className="hover:bg-[#66FCF1] w-fit rounded transition-all">
                 <Link href="#projects">
@@ -49,7 +78,6 @@ export default function page() {
           </div>
         </div>
       </div>
-
       <div className="" id="about">
         <About />
       </div>
