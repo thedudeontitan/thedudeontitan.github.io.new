@@ -26,7 +26,7 @@ function Navbar() {
   useEffect(() => {});
 
   return (
-    <div className="w-screen flex">
+    <div className="w-screen flex z-20">
       <nav
         className={`lg:flex hidden flex-row top-0 right-0 left-0 fixed w-full transition-all duration-500 ${
           isScrolled

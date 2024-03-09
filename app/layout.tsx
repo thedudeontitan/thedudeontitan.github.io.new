@@ -25,7 +25,7 @@ export default function RootLayout({
         <Navbar />
         <main className="overflow-hidden">
         {children}
-          <div className="hidden lg:fixed lg:flex flex-row left-0 bottom-0 lg:ml-14 text-white">
+          <div className="hidden lg:fixed lg:flex flex-row left-0 bottom-0 lg:ml-14 text-white z-20">
             <div className="text-2xl flex flex-col items-center gap-y-5">
               <Link href="https://github.com/thedudeontitan">
                 <FiGithub className="hover:scale-125 transition-all duration-500 hover:text-[#66FCF1]" />
@@ -39,7 +39,7 @@ export default function RootLayout({
               <div className="border-l-2 h-32 border-white" />
             </div>
           </div>
-          <div className="hidden lg:fixed lg:flex flex-row right-0 bottom-0 mr-14 text-white">
+          <div className="hidden lg:fixed lg:flex flex-row right-0 bottom-0 mr-14 text-white z-20">
             <div className="text-base flex flex-col items-center gap-y-5">
               <Link href="mailto:ankitkokane90@gmail.com">
                 <span className="[writing-mode:vertical-lr] hover:scale-110 transition-all duration-500 hover:text-[#66FCF1]">
