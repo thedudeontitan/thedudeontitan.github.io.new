@@ -18,6 +18,17 @@ interface project {
 const projects: project[] = [
   {
     key: 1,
+    image_path: "/assets/project3.png",
+    type: "Website",
+    title: "Kai Ramen",
+    description:
+      "A restaurant business website which focuses on Japanese cuisine.",
+    tools: ["ReactJS", "TailwindCSS", "NodeJS", "ExpressJS", "MongoDB"],
+    github_link: "https://github.com/thedudeontitan/kai-ramen",
+    link: "https://kai-ramen.vercel.app/",
+  },
+  {
+    key: 2,
     image_path: "/assets/project6.png",
     type: "Private Blockchain and Website",
     title: "Hyper Updates",
@@ -28,7 +39,7 @@ const projects: project[] = [
     link: "https://hyper-updates.vercel.app/",
   },
   {
-    key: 2,
+    key: 3,
     image_path: "/assets/project1.png",
     type: "Web App",
     title: "Creative Dugout",
@@ -39,7 +50,7 @@ const projects: project[] = [
     link: "https://creative-dogout-website.vercel.app/",
   },
   {
-    key: 3,
+    key: 4,
     image_path: "/assets/project2.png",
     type: "Web App",
     title: "Safe Gaurd",
@@ -50,25 +61,14 @@ const projects: project[] = [
     link: "https://github.com/thedudeontitan/safe-gaurd",
   },
   {
-    key: 4,
+    key: 5,
     image_path: "/assets/project5.png",
     type: "Web App",
     title: "Medico",
     description:
       "Forkscanner Website is a sophisticated tool designed to actively monitor the Bitcoin blockchain in real-time, providing users with valuable insights into the state of the network.",
     tools: ["JavaScript", "ReactJS", "Bitcoin ForkScanner"],
-    github_link: "https://github.com/thedudeontitan/safe-gaurd",
-    link: "https://github.com/thedudeontitan/safe-gaurd",
-  },
-  {
-    key: 5,
-    image_path: "/assets/project4.png",
-    type: "Mobile App",
-    title: "Health Hive",
-    description:
-      "A mobile Application where users can scan the barcode on a packaged food and find out about all their harmfulness, Also analyse your recipes with the analyse tool.",
-    tools: ["JavaScript", "React-Native"],
-    github_link: "https://github.com/thedudeontitan/safe-gaurd",
+    github_link: "https://github.com/thedudeontitan/medico",
     link: "https://github.com/thedudeontitan/safe-gaurd",
   },
 ];
@@ -76,8 +76,8 @@ const projects: project[] = [
 export default function Projects() {
   return (
     <section className="min-h-screen">
-      <div className="lg:flex w-full hidden">
-        <div className="flex flex-col mx-2 lg:mx-24 xl:mx-96 w-full">
+      <div className="lg:flex hidden justify-center items-center">
+        <div className="flex flex-col ">
           <div className="mt-28 flex flex-row items-center gap-x-10">
             <span className="text-4xl font-semibold opacity-90 text-[#f3f3f3] ">
               Things I&apos;ve Built
@@ -87,23 +87,18 @@ export default function Projects() {
           {projects.map((data) => (
             <div key={data.key}>
               <Reveal side={`${data.key % 2 === 0 ? "right" : "left"}`}>
-                <div className="mt-14 flex flex-col w-full mb-5">
-                  <div
-                    className={` flex w-full ${
-                      data.key % 2 === 0 ? "justify-end ml-24" : ""
-                    }`}
-                  >
+                <div className="relative mt-14 flex flex-col justify-center items-center w-full mb-5">
+
                     <Image
                       src={data.image_path}
                       alt="project"
                       width={600}
                       height={600}
-                      className={` ${data.key % 2 === 0 ? "ml-44" : "ml-10"}`}
+                      className={`w-[600px] ${data.key % 2 === 0 ? "ml-60" : ""}`}
                     ></Image>
-                  </div>
                   <div
                     className={`absolute z-10 flex flex-col text-right ${
-                      data.key % 2 === 0 ? "" : "ml-[65vh]"
+                      data.key % 2 === 0 ? "mr-[45vw]" : "ml-[55vw]"
                     }`}
                   >
                     <div className={`flex flex-col `}>
@@ -123,7 +118,7 @@ export default function Projects() {
                       </span>
                     </div>
                     <div
-                      className={` mt-8 text-left rounded p-8 bg-[#15171f] w-[52vh] shadow-md shadow-[#15171f] hover:shadow-lg hover:shadow-[#15171f] transition-all ${
+                      className={` mt-8 text-left rounded p-8 bg-[#15171f] w-[30vw] shadow-md shadow-[#15171f] hover:shadow-lg hover:shadow-[#15171f] transition-all ${
                         data.key % 2 === 0 ? "" : "ml-10"
                       }`}
                     >
@@ -143,20 +138,20 @@ export default function Projects() {
                       </div>
                       <div className="flex flex-row justify-end text-2xl mt-4 gap-x-5">
                         <Link
-                          href="https://github.com/thedudeontitan/safe-gaurd"
+                          href={data.github_link}
                           target="_blank"
                         >
                           <FiGithub className="hover:scale-110 hover:text-[#66FCF1] transition-all" />
                         </Link>
                         <Link
-                          href="https://github.com/thedudeontitan/safe-gaurd"
+                          href={data.link}
                           target="_blank"
                         >
                           <FiExternalLink className="hover:scale-110 hover:text-[#66FCF1] transition-all" />
                         </Link>
                       </div>
                     </div>
-                  </div>
+                  </div> 
                 </div>
               </Reveal>
             </div>
