@@ -70,7 +70,7 @@ const jobs: job[] = [
       "Leading a group of passionate developers to build projects and to organize various sessions.",
       "Building a large tech community of developers and students to share knowledge and experience.",
       "Teaching students about various technologies and sharing my experience throughout my developer journey.",
-      "Talking about OpenSource, Cloud, Blockchain and Web Developement."
+      "Talking about OpenSource, Cloud, Blockchain and Web Developement.",
     ],
   },
 ];
@@ -79,39 +79,21 @@ export default function Experience() {
   return (
     <section>
       <div className="min-h-screen mx-5 lg:mx-0 flex ">
-        <div className="flex flex-col w-full items-center xl:mx-96 lg:mx-24 mt-28">
+        <div className="flex flex-col w-full items-center mt-28">
           <Reveal side="up">
             <span className="text-4xl font-semibold opacity-90 text-[#f3f3f3] mb-10 lg:mb-20">
               Experience
             </span>
           </Reveal>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 justify-center mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 justify-start ">
             {jobs.map((info) => (
-              <div key={info.key} className="lg:h-full flex">
-                <Reveal side={`${info.key%2===0?"right":"left"}`}>
-                  <div className="hover:bg-[#66FCF1] rounded-md transition-all mt-10 lg:h-[62vh] flex">
-                    <div className="bg-[#0B0C10] shadow-md flex flex-col gap-2 p-5 rounded-md shadow-[#232427] h-full transition-all hover:-translate-x-2 hover:-translate-y-2">
-                      <div className="flex flex-col font-mono font-medium">
-                        <span className="text-lg">{info.title}</span>
-                        <span className="text-lg text-[#66FCF1]">
-                          &nbsp;@{info.company_name}
-                        </span>
-                      </div>
-                      <span className="opacity-80 font-mono mb-5">
-                        {info.duration}
-                      </span>
-                      <ul className="list-none flex flex-col gap-y-2 opacity-80 text-[#f3f3f3]">
-                        {info.description.map((descrip) => (
-                          <li key={descrip} className="pl-2">
-                            <VscDebugBreakpointLogUnverified className="inline-block mr-2 text-[#66FCF1]" />
-                            {descrip}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </Reveal>
-              </div>
+              <ProjectCard
+                company_name={info.company_name}
+                description={info.description}
+                duration={info.duration}
+                key={info.key}
+                title={info.title}
+              />
             ))}
           </div>
         </div>
@@ -119,3 +101,35 @@ export default function Experience() {
     </section>
   );
 }
+
+const ProjectCard: React.FC<job> = ({
+  key,
+  title,
+  company_name,
+  description,
+  duration,
+}) => {
+  return (
+    <Reveal side="up">
+        <div className="hover:bg-[#66FCF1] rounded-md transition-all mt-10 flex">
+          <div className="bg-[#0B0C10] min-h-[50vh] justify-center shadow-md w-[80vw] lg:w-[25vw] flex flex-col gap-2 p-5 rounded-md shadow-[#232427] transition-all hover:-translate-x-2 hover:-translate-y-2">
+            <div className="flex flex-col font-mono font-medium">
+              <span className="text-lg">{title}</span>
+              <span className="text-lg text-[#66FCF1]">
+                &nbsp;@{company_name}
+              </span>
+            </div>
+            <span className="opacity-80 font-mono mb-5">{duration}</span>
+            <ul className="list-none flex flex-col gap-y-2 opacity-80 text-[#f3f3f3]">
+              {description.map((descrip) => (
+                <li key={descrip} className="pl-2">
+                  <VscDebugBreakpointLogUnverified className="inline-block mr-2 text-[#66FCF1]" />
+                  {descrip}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+    </Reveal>
+  );
+};
