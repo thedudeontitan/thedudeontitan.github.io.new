@@ -29,6 +29,17 @@ const projects: project[] = [
   },
   {
     key: 2,
+    image_path: "/assets/project4.png",
+    type: "Website",
+    title: "Dataverse",
+    description:
+      "Dataverse is a custom blockchain which revolutionizes the way scientific data is traded and verified. Built at Chainlink BlockMagic Hackathon.",
+    tools: ["NextJS", "ReactJS", "TailwindCSS", "Framer-Motion"],
+    github_link: "https://github.com/thedudeontitan/kai-ramen",
+    link: "https://kai-ramen.vercel.app/",
+  },
+  {
+    key: 3,
     image_path: "/assets/project6.png",
     type: "Private Blockchain and Website",
     title: "Hyper Updates",
@@ -39,7 +50,7 @@ const projects: project[] = [
     link: "https://hyper-updates.vercel.app/",
   },
   {
-    key: 3,
+    key: 4,
     image_path: "/assets/project1.png",
     type: "Web App",
     title: "Creative Dugout",
@@ -50,7 +61,7 @@ const projects: project[] = [
     link: "https://creative-dogout-website.vercel.app/",
   },
   {
-    key: 4,
+    key: 5,
     image_path: "/assets/project2.png",
     type: "Web App",
     title: "Safe Gaurd",
@@ -67,7 +78,7 @@ export default function Projects() {
     <section className="min-h-screen">
       <div className="lg:flex hidden justify-center items-center">
         <div className="flex flex-col ">
-          <div className="mt-28 flex flex-row items-center gap-x-10">
+          <div className="mt-28 flex flex-row items-center gap-x-10 lg:-ml-60">
             <span className="text-4xl font-semibold opacity-90 text-[#f3f3f3] ">
               Things I&apos;ve Built
             </span>
