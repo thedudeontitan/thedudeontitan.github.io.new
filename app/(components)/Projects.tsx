@@ -60,17 +60,6 @@ const projects: project[] = [
     github_link: "https://github.com/thedudeontitan/safe-gaurd",
     link: "https://github.com/thedudeontitan/safe-gaurd",
   },
-  {
-    key: 5,
-    image_path: "/assets/project5.png",
-    type: "Web App",
-    title: "Medico",
-    description:
-      "Forkscanner Website is a sophisticated tool designed to actively monitor the Bitcoin blockchain in real-time, providing users with valuable insights into the state of the network.",
-    tools: ["JavaScript", "ReactJS", "Bitcoin ForkScanner"],
-    github_link: "https://github.com/thedudeontitan/medico",
-    link: "https://github.com/thedudeontitan/safe-gaurd",
-  },
 ];
 
 export default function Projects() {
@@ -88,14 +77,13 @@ export default function Projects() {
             <div key={data.key}>
               <Reveal side={`${data.key % 2 === 0 ? "right" : "left"}`}>
                 <div className="relative mt-14 flex flex-col justify-center items-center w-full mb-5">
-
-                    <Image
-                      src={data.image_path}
-                      alt="project"
-                      width={600}
-                      height={600}
-                      className={`w-[600px] ${data.key % 2 === 0 ? "ml-60" : ""}`}
-                    ></Image>
+                  <Image
+                    src={data.image_path}
+                    alt="project"
+                    width={600}
+                    height={600}
+                    className={`w-[600px] ${data.key % 2 === 0 ? "ml-60" : ""}`}
+                  ></Image>
                   <div
                     className={`absolute z-10 flex flex-col text-right ${
                       data.key % 2 === 0 ? "mr-[45vw]" : "ml-[55vw]"
@@ -137,21 +125,15 @@ export default function Projects() {
                         ))}
                       </div>
                       <div className="flex flex-row justify-end text-2xl mt-4 gap-x-5">
-                        <Link
-                          href={data.github_link}
-                          target="_blank"
-                        >
+                        <Link href={data.github_link} target="_blank">
                           <FiGithub className="hover:scale-110 hover:text-[#66FCF1] transition-all" />
                         </Link>
-                        <Link
-                          href={data.link}
-                          target="_blank"
-                        >
+                        <Link href={data.link} target="_blank">
                           <FiExternalLink className="hover:scale-110 hover:text-[#66FCF1] transition-all" />
                         </Link>
                       </div>
                     </div>
-                  </div> 
+                  </div>
                 </div>
               </Reveal>
             </div>
@@ -183,16 +165,10 @@ export default function Projects() {
                       ))}
                     </div>
                     <div className="flex flex-row text-2xl mt-4 mb-5 gap-x-5">
-                      <Link
-                        href="https://github.com/thedudeontitan/safe-gaurd"
-                        target="_blank"
-                      >
+                      <Link href={info.github_link} target="_blank">
                         <FiGithub className="hover:scale-110 hover:text-[#66FCF1] transition-all" />
                       </Link>
-                      <Link
-                        href="https://github.com/thedudeontitan/safe-gaurd"
-                        target="_blank"
-                      >
+                      <Link href={info.link} target="_blank">
                         <FiExternalLink className="hover:scale-110 hover:text-[#66FCF1] transition-all" />
                       </Link>
                     </div>
