@@ -13,6 +13,30 @@ interface job {
 const jobs: job[] = [
   {
     key: 1,
+    title: "Frontend ReactJS Developer Intern",
+    company_name: "BirdVision Consultancy",
+    duration: "June 2024 to Present",
+    description: [
+      "Working on a B2B Saas product.",
+      "Working on the frontend Using ReactJS and Material UI.",
+      "Collaborating with the team to create beautiful web experiences.",
+      "Tools Used: ReactJS, Material UI, TailwindCSS.",
+    ],
+  },
+  {
+    key: 1,
+    title: "Google Summer Of Code Mentee",
+    company_name: "Google Summer Of Code - OWASP",
+    duration: "June 2024 to Aug 2024",
+    description: [
+      "Working on a Custom Blockchain to create a Bug Bounty Reward System.",
+      "Also working on the website with backend as Django.",
+      "Collaborating in the Open Source Project with other contributors and maintainers.",
+      "Tools Used: Go, Python, Django, Solidity.",
+    ],
+  },
+  {
+    key: 1,
     title: "SDE Intern",
     company_name: "DOI Soft Tech Pvt Ltd.",
     duration: "Oct 2023 to Dec 2023",
@@ -111,25 +135,25 @@ const ProjectCard: React.FC<job> = ({
 }) => {
   return (
     <Reveal side="up">
-        <div className="hover:bg-[#66FCF1] rounded-md transition-all mt-10 flex">
-          <div className="bg-[#0B0C10] min-h-[50vh] justify-center shadow-md w-[80vw] lg:w-[25vw] flex flex-col gap-2 p-5 rounded-md shadow-[#232427] transition-all hover:-translate-x-2 hover:-translate-y-2">
-            <div className="flex flex-col font-mono font-medium">
-              <span className="text-lg">{title}</span>
-              <span className="text-lg text-[#66FCF1]">
-                &nbsp;@{company_name}
-              </span>
-            </div>
-            <span className="opacity-80 font-mono mb-5">{duration}</span>
-            <ul className="list-none flex flex-col gap-y-2 opacity-80 text-[#f3f3f3]">
-              {description.map((descrip) => (
-                <li key={descrip} className="pl-2">
-                  <VscDebugBreakpointLogUnverified className="inline-block mr-2 text-[#66FCF1]" />
-                  {descrip}
-                </li>
-              ))}
-            </ul>
+      <div className="hover:bg-[#66FCF1] rounded-md transition-all mt-10 flex">
+        <div className="bg-[#0B0C10] min-h-[50vh] justify-center shadow-md w-[80vw] lg:w-[25vw] flex flex-col gap-2 p-5 rounded-md shadow-[#232427] transition-all hover:-translate-x-2 hover:-translate-y-2">
+          <div className="flex flex-col font-mono font-medium">
+            <span className="text-lg">{title}</span>
+            <span className="text-lg text-[#66FCF1]">
+              &nbsp;@{company_name}
+            </span>
           </div>
+          <span className="opacity-80 font-mono mb-5">{duration}</span>
+          <ul className="list-none flex flex-col gap-y-2 opacity-80 text-[#f3f3f3]">
+            {description.map((descrip) => (
+              <li key={descrip} className="pl-2">
+                <VscDebugBreakpointLogUnverified className="inline-block mr-2 text-[#66FCF1]" />
+                {descrip}
+              </li>
+            ))}
+          </ul>
         </div>
+      </div>
     </Reveal>
   );
 };
