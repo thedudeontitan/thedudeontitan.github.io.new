@@ -18,23 +18,29 @@ interface project {
 const projects: project[] = [
   {
     key: 1,
+    image_path: "/assets/project4.png",
+    type: "Website",
+    title: "AssetX",
+    description:
+      "AssetX is a Data ownership and content monetorization platform secured with zkSnarks and built on Arweave AO.",
+    tools: [
+      "ReactJS",
+      "Lua Smart Contract",
+      "AO Based Computing",
+      "Tailwind CSS",
+      "SQLite",
+    ],
+    github_link: "https://github.com/AssetX-org/",
+    link: "https://assetx-ao.arweave.net/",
+  },
+  {
+    key: 2,
     image_path: "/assets/project3.png",
     type: "Website",
     title: "Kai Ramen",
     description:
       "A restaurant business website which focuses on Japanese cuisine.",
     tools: ["ReactJS", "TailwindCSS", "NodeJS", "ExpressJS", "MongoDB"],
-    github_link: "https://github.com/thedudeontitan/kai-ramen",
-    link: "https://kai-ramen.vercel.app/",
-  },
-  {
-    key: 2,
-    image_path: "/assets/project4.png",
-    type: "Website",
-    title: "Dataverse",
-    description:
-      "Dataverse is a custom blockchain which revolutionizes the way scientific data is traded and verified. Built at Chainlink BlockMagic Hackathon.",
-    tools: ["NextJS", "ReactJS", "TailwindCSS", "Framer-Motion"],
     github_link: "https://github.com/thedudeontitan/kai-ramen",
     link: "https://kai-ramen.vercel.app/",
   },
@@ -130,9 +136,16 @@ export default function Projects() {
                         data.key % 2 === 0 ? "items-start" : ""
                       }`}
                     >
-                      <div className="mt-5 text-sm flex flex-row justify-end font-mono gap-x-2">
+                      <div
+                        className={`mt-5 text-sm flex flex-wrap font-mono gap-x-2 w-[25vw] ${
+                          data.key % 2 === 0 ? "mr-auto" : "ml-auto justify-end"
+                        }`}
+                      >
                         {data.tools.map((tool) => (
-                          <span key={tool}>{tool}</span>
+                          <span key={tool} className="whitespace-nowrap">
+                            <span className="text-[#66FCF1]">|</span>
+                            {tool}
+                          </span>
                         ))}
                       </div>
                       <div className="flex flex-row justify-end text-2xl mt-4 gap-x-5">
