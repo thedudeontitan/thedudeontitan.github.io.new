@@ -20,11 +20,11 @@ export default function Contact() {
               opensource projects providing real world value.
             </span>
             <div className="hover:bg-[#66FCF1] w-fit rounded transition-all my-10">
-              <Link href="mailto:ankitkokane77@gmail.com">
+              <a href="mailto:ankitkokane77@gmail.com">
                 <button className="bg-[#0B0C10] border z-10 border-[#66FCF1] text-[#66FCF1] w-fit p-5 rounded hover:-translate-x-1 hover:-translate-y-1 transition-all">
                   Contact Me
                 </button>
-              </Link>
+              </a>
             </div>
           </div>
         </div>
