@@ -18,6 +18,39 @@ interface project {
 const projects: project[] = [
   {
     key: 1,
+    image_path: "/assets/project1.png",
+    type: "Web App",
+    title: "Creative Dugout",
+    description:
+      "A Website I've built for Creative Dugout which will help their business reach more clients and grow their business.",
+    tools: ["TypeScript", "NextJS", "TailwindCSS"],
+    github_link: "https://github.com/thedudeontitan/",
+    link: "https://creative-dogout-website.vercel.app/",
+  },
+  {
+    key: 2,
+    image_path: "/assets/project2.png",
+    type: "Private Blockchain and Website",
+    title: "Hyper Updates",
+    description:
+      "Website and Private Blockchain built at ChainLink Hackathon. To provide Decentralized and secure firmware updates.",
+    tools: ["TypeScript", "NextJS", "TailwindCSS"],
+    github_link: "https://github.com/Hyper-Updates/hyper_updates_frontend",
+    link: "https://hyper-updates.vercel.app/",
+  },
+  {
+    key: 3,
+    image_path: "/assets/project3.png",
+    type: "Website",
+    title: "Kai Ramen",
+    description:
+      "A restaurant business website which focuses on Japanese cuisine.",
+    tools: ["ReactJS", "TailwindCSS", "NodeJS", "ExpressJS", "MongoDB"],
+    github_link: "https://github.com/thedudeontitan/kai-ramen",
+    link: "https://kai-ramen.vercel.app/",
+  },
+  {
+    key: 4,
     image_path: "/assets/project4.png",
     type: "Website",
     title: "AssetX",
@@ -34,48 +67,15 @@ const projects: project[] = [
     link: "https://assetx-ao.arweave.net/",
   },
   {
-    key: 2,
-    image_path: "/assets/project3.png",
-    type: "Website",
-    title: "Kai Ramen",
-    description:
-      "A restaurant business website which focuses on Japanese cuisine.",
-    tools: ["ReactJS", "TailwindCSS", "NodeJS", "ExpressJS", "MongoDB"],
-    github_link: "https://github.com/thedudeontitan/kai-ramen",
-    link: "https://kai-ramen.vercel.app/",
-  },
-  {
-    key: 3,
-    image_path: "/assets/project6.png",
-    type: "Private Blockchain and Website",
-    title: "Hyper Updates",
-    description:
-      "Website and Private Blockchain built at ChainLink Hackathon. To provide Decentralized and secure firmware updates.",
-    tools: ["TypeScript", "NextJS", "TailwindCSS"],
-    github_link: "https://github.com/Hyper-Updates/hyper_updates_frontend",
-    link: "https://hyper-updates.vercel.app/",
-  },
-  {
-    key: 4,
-    image_path: "/assets/project1.png",
-    type: "Web App",
-    title: "Creative Dugout",
-    description:
-      "A Website I've built for Creative Dugout which will help their business reach more clients and grow their business.",
-    tools: ["TypeScript", "NextJS", "TailwindCSS"],
-    github_link: "https://github.com/thedudeontitan/",
-    link: "https://creative-dogout-website.vercel.app/",
-  },
-  {
     key: 5,
-    image_path: "/assets/project2.png",
+    image_path: "/assets/project5.png",
     type: "Web App",
-    title: "Safe Gaurd",
+    title: "Blepo - L2 Data Aggregator",
     description:
-      " A web3 application built to allow companies to help manage their crypto assets. Create multisig wallets, safe vaults and transaction groups.",
-    tools: ["TypeScript", "ReactJS", "Solidity", "Polygon", "TailwindCSS"],
-    github_link: "https://github.com/thedudeontitan/safe-gaurd",
-    link: "https://github.com/thedudeontitan/safe-gaurd",
+      "Blepo is a L2 Monitor and Data Aggregator which sources data from various sources for the L2s in the BNB ecosystem to present them on a single platform.",
+    tools: ["TypeScript", "NextJS", "Material UI", "TailwindCSS"],
+    github_link: "https://github.com/thedudeontitan/blepo",
+    link: "https://blepo.vercel.app/",
   },
 ];
 
@@ -90,78 +90,84 @@ export default function Projects() {
             </span>
             <div className="border-t w-80 lg:flex overflow-hidden border-[#353D47]" />
           </div>
-          {projects.map((data) => (
-            <div key={data.key}>
-              <Reveal side={`${data.key % 2 === 0 ? "right" : "left"}`}>
-                <div className="relative mt-14 flex flex-col justify-center items-center w-full mb-5">
-                  <Image
-                    src={data.image_path}
-                    alt="project"
-                    width={600}
-                    height={600}
-                    className={`w-[600px] ${data.key % 2 === 0 ? "ml-60" : ""}`}
-                  ></Image>
-                  <div
-                    className={`absolute z-10 flex flex-col text-right ${
-                      data.key % 2 === 0 ? "mr-[45vw]" : "ml-[55vw]"
-                    }`}
-                  >
-                    <div className={`flex flex-col `}>
-                      <span
-                        className={`font-mono text-[#66FCF1] text-sm ${
-                          data.key % 2 === 0 ? "text-left" : ""
-                        }`}
-                      >
-                        {data.type}
-                      </span>
-                      <span
-                        className={`text-[#f3f3f3] font-semibold text-2xl mt-2 ${
-                          data.key % 2 === 0 ? "text-left" : ""
-                        }`}
-                      >
-                        {data.title}
-                      </span>
-                    </div>
+          <div className="flex flex-col-reverse ">
+            {projects.map((data) => (
+              <div key={data.key}>
+                <Reveal side={`${data.key % 2 === 0 ? "right" : "left"}`}>
+                  <div className="relative mt-14 flex flex-col justify-center items-center w-full mb-5">
+                    <Image
+                      src={data.image_path}
+                      alt="project"
+                      width={600}
+                      height={600}
+                      className={`w-[600px] ${
+                        data.key % 2 === 0 ? "ml-60" : ""
+                      }`}
+                    ></Image>
                     <div
-                      className={` mt-8 text-left rounded p-8 bg-[#15171f] w-[30vw] shadow-md shadow-[#15171f] hover:shadow-lg hover:shadow-[#15171f] transition-all ${
-                        data.key % 2 === 0 ? "" : "ml-10"
+                      className={`absolute z-10 flex flex-col text-right ${
+                        data.key % 2 === 0 ? "mr-[45vw]" : "ml-[55vw]"
                       }`}
                     >
-                      <span className="text-[#f3f3f3] opacity-80">
-                        {data.description}
-                      </span>
-                    </div>
-                    <div
-                      className={`flex flex-col ${
-                        data.key % 2 === 0 ? "items-start" : ""
-                      }`}
-                    >
-                      <div
-                        className={`mt-5 text-sm flex flex-wrap font-mono gap-x-2 w-[25vw] ${
-                          data.key % 2 === 0 ? "mr-auto" : "ml-auto justify-end"
-                        }`}
-                      >
-                        {data.tools.map((tool) => (
-                          <span key={tool} className="whitespace-nowrap">
-                            <span className="text-[#66FCF1]">|</span>
-                            {tool}
-                          </span>
-                        ))}
+                      <div className={`flex flex-col `}>
+                        <span
+                          className={`font-mono text-[#66FCF1] text-sm ${
+                            data.key % 2 === 0 ? "text-left" : ""
+                          }`}
+                        >
+                          {data.type}
+                        </span>
+                        <span
+                          className={`text-[#f3f3f3] font-semibold text-2xl mt-2 ${
+                            data.key % 2 === 0 ? "text-left" : ""
+                          }`}
+                        >
+                          {data.title}
+                        </span>
                       </div>
-                      <div className="flex flex-row justify-end text-2xl mt-4 gap-x-5">
-                        <Link href={data.github_link} target="_blank">
-                          <FiGithub className="hover:scale-110 hover:text-[#66FCF1] transition-all" />
-                        </Link>
-                        <Link href={data.link} target="_blank">
-                          <FiExternalLink className="hover:scale-110 hover:text-[#66FCF1] transition-all" />
-                        </Link>
+                      <div
+                        className={` mt-8 text-left rounded p-8 bg-[#15171f] w-[30vw] shadow-md shadow-[#15171f] hover:shadow-lg hover:shadow-[#15171f] transition-all ${
+                          data.key % 2 === 0 ? "" : "ml-10"
+                        }`}
+                      >
+                        <span className="text-[#f3f3f3] opacity-80">
+                          {data.description}
+                        </span>
+                      </div>
+                      <div
+                        className={`flex flex-col ${
+                          data.key % 2 === 0 ? "items-start" : ""
+                        }`}
+                      >
+                        <div
+                          className={`mt-5 text-sm flex flex-wrap font-mono gap-x-2 w-[25vw] ${
+                            data.key % 2 === 0
+                              ? "mr-auto"
+                              : "ml-auto justify-end"
+                          }`}
+                        >
+                          {data.tools.map((tool) => (
+                            <span key={tool} className="whitespace-nowrap">
+                              <span className="text-[#66FCF1]">|</span>
+                              {tool}
+                            </span>
+                          ))}
+                        </div>
+                        <div className="flex flex-row justify-end text-2xl mt-4 gap-x-5">
+                          <Link href={data.github_link} target="_blank">
+                            <FiGithub className="hover:scale-110 hover:text-[#66FCF1] transition-all" />
+                          </Link>
+                          <Link href={data.link} target="_blank">
+                            <FiExternalLink className="hover:scale-110 hover:text-[#66FCF1] transition-all" />
+                          </Link>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </Reveal>
-            </div>
-          ))}
+                </Reveal>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
       <div className="flex lg:hidden mx-5">

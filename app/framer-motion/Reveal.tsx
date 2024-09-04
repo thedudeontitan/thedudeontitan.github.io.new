@@ -19,11 +19,18 @@ export const Reveal = ({ children, width = "fit-content", side }: Props) => {
     if (isInView) {
       mainControls.start("visible");
     }
-  }, [isInView]);
+  }, [isInView, mainControls]);
 
   if (side === "up") {
     return (
-      <div ref={ref} style={{ position: "relative", width, overflow: isMobile ? 'hidden' : 'visible' }}>
+      <div
+        ref={ref}
+        style={{
+          position: "relative",
+          width,
+          overflow: isMobile ? "hidden" : "visible",
+        }}
+      >
         <motion.div
           variants={{
             hidden: { opacity: 0, y: 75 },
@@ -41,7 +48,14 @@ export const Reveal = ({ children, width = "fit-content", side }: Props) => {
 
   if (side === "left") {
     return (
-      <div ref={ref} style={{ position: "relative", width, overflow: isMobile ? 'hidden' : 'visible' }}>
+      <div
+        ref={ref}
+        style={{
+          position: "relative",
+          width,
+          overflow: isMobile ? "hidden" : "visible",
+        }}
+      >
         <motion.div
           variants={{
             hidden: { opacity: 0, x: -75 },
@@ -59,7 +73,14 @@ export const Reveal = ({ children, width = "fit-content", side }: Props) => {
 
   if (side === "right") {
     return (
-      <div ref={ref} style={{ position: "relative", width, overflow: isMobile ? 'hidden' : 'visible' }}>
+      <div
+        ref={ref}
+        style={{
+          position: "relative",
+          width,
+          overflow: isMobile ? "hidden" : "visible",
+        }}
+      >
         <motion.div
           variants={{
             hidden: { opacity: 0, x: 75 },
