@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { useEffect, useRef, useState } from "react";
 import About from "./(components)/About";
@@ -12,33 +12,34 @@ import * as THREE from "three";
 
 export default function Page() {
   const [vantaEffect, setVantaEffect] = useState(0);
-	const vantaRef = useRef(null);
+  const vantaRef = useRef(null);
 
-	useEffect(() => {
-		if (!vantaEffect) {
-			setVantaEffect(
-				GLOBE({
-					el: vantaRef.current,
-					THREE: THREE,
-					mouseControls: true,
-					touchControls: true,
-					gyroControls: false,
-					minHeight: 200.0,
-					minWidth: 200.0,
-					scale: 1.0,
-					scaleMobile: 1.0,
-					color: 0x66FCF1,
-					backgroundColor: 0x0B0C10,
-          size: 1.0
-				})
-			);
-		}
-	}, [vantaEffect]);
+  useEffect(() => {
+    if (!vantaEffect) {
+      setVantaEffect(
+        GLOBE({
+          el: vantaRef.current,
+          THREE: THREE,
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 200.0,
+          minWidth: 200.0,
+          scale: 1.0,
+          scaleMobile: 1.0,
+          color: 0x66fcf1,
+          backgroundColor: 0x0b0c10,
+          size: 1.0,
+        })
+      );
+    }
+  }, [vantaEffect]);
   return (
     <div className="bg-[#0B0C10] text-white">
       <div
-			className='bg-[#0B0C10] min-h-screen w-full flex flex-col justify-center items-start'
-			ref={vantaRef}>
+        className="bg-[#0B0C10] min-h-screen w-full flex flex-col justify-center items-start"
+        ref={vantaRef}
+      >
         <div className="backdrop-blur-[2px] lg:backdrop-blur-[1px] w-full px-5 lg:pl-24 xl:pl-32 flex min-h-screen">
           <div className="flex flex-col gap-y-5 my-auto">
             <Reveal side="up">
@@ -68,7 +69,10 @@ export default function Page() {
             </div> */}
             <Reveal side="up">
               <div className="hover:bg-[#66FCF1] w-fit rounded transition-all">
-                <Link href="https://docs.google.com/document/d/1_40BOE1B-5jpTZuXItFlf1SOA98PuWMPaWzvgUYLFxQ/edit?usp=sharing" target="_blank">
+                <Link
+                  href="https://drive.google.com/file/d/1ODUkK-FCiYc67js2sSDwUjI0kAZU71PW/view?usp=sharing"
+                  target="_blank"
+                >
                   <button className="bg-[#0B0C10] text-sm lg:text-base border z-10 border-[#66FCF1] text-[#66FCF1] w-fit p-5 rounded hover:-translate-x-1 hover:-translate-y-1 transition-all">
                     Resume
                   </button>

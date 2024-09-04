@@ -64,7 +64,10 @@ function Navbar() {
           </Link>
 
           <div className="hover:bg-[#66FCF1] w-fit rounded transition-all">
-            <Link href="/Resume.pdf" target="_blank">
+            <Link
+              href="https://drive.google.com/file/d/1ODUkK-FCiYc67js2sSDwUjI0kAZU71PW/view?usp=sharing"
+              target="_blank"
+            >
               <button className="bg-[#0B0C10] border z-10 border-[#66FCF1] text-[#66FCF1] w-fit py-2 px-4 rounded hover:-translate-x-1 hover:-translate-y-1 transition-all">
                 Resume
               </button>
@@ -120,7 +123,10 @@ function Navbar() {
                   Contact
                 </Link>
                 <div className="hover:bg-[#66FCF1] w-fit rounded transition-all mx-5">
-                  <Link href="/Resume.pdf" target="_blank">
+                  <Link
+                    href="https://drive.google.com/file/d/1ODUkK-FCiYc67js2sSDwUjI0kAZU71PW/view?usp=sharing"
+                    target="_blank"
+                  >
                     <button className="bg-[#232427] border z-10 border-[#66FCF1] text-[#66FCF1] w-fit py-2 px-4 rounded hover:-translate-x-1 hover:-translate-y-1 transition-all">
                       Resume
                     </button>
