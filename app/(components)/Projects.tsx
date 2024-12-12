@@ -18,28 +18,6 @@ interface project {
 const projects: project[] = [
   {
     key: 1,
-    image_path: "/assets/project1.png",
-    type: "Web App",
-    title: "Creative Dugout",
-    description:
-      "A Website I've built for Creative Dugout which will help their business reach more clients and grow their business.",
-    tools: ["TypeScript", "NextJS", "TailwindCSS"],
-    github_link: "https://github.com/thedudeontitan/",
-    link: "https://creative-dogout-website.vercel.app/",
-  },
-  {
-    key: 2,
-    image_path: "/assets/project2.png",
-    type: "Private Blockchain and Website",
-    title: "Hyper Updates",
-    description:
-      "Website and Private Blockchain built at ChainLink Hackathon. To provide Decentralized and secure firmware updates.",
-    tools: ["TypeScript", "NextJS", "TailwindCSS"],
-    github_link: "https://github.com/Hyper-Updates/hyper_updates_frontend",
-    link: "https://hyper-updates.vercel.app/",
-  },
-  {
-    key: 3,
     image_path: "/assets/project3.png",
     type: "Website",
     title: "Kai Ramen",
@@ -50,7 +28,7 @@ const projects: project[] = [
     link: "https://kai-ramen.vercel.app/",
   },
   {
-    key: 4,
+    key: 2,
     image_path: "/assets/project4.png",
     type: "Website",
     title: "AssetX",
@@ -67,7 +45,7 @@ const projects: project[] = [
     link: "https://assetx-ao.arweave.net/",
   },
   {
-    key: 5,
+    key: 3,
     image_path: "/assets/project5.png",
     type: "Web App",
     title: "Blepo - L2 Data Aggregator",
@@ -76,6 +54,29 @@ const projects: project[] = [
     tools: ["TypeScript", "NextJS", "Material UI", "TailwindCSS"],
     github_link: "https://github.com/thedudeontitan/blepo",
     link: "https://blepo.vercel.app/",
+  },
+
+  {
+    key: 4,
+    image_path: "/assets/project6.png",
+    type: "Defi",
+    title: "Luminar",
+    description:
+      "Luminar is a High Frequency Autonoumous Trading Platform built on to horizontally scale on various blockchains.",
+    tools: ["Solidity", "TypeScript", "ReactJS", "TailwindCSS"],
+    github_link: "https://github.com/Luminar-Org",
+    link: "https://luminar-omega.vercel.app/",
+  },
+  {
+    key: 5,
+    image_path: "/assets/project7.png",
+    type: "Defi",
+    title: "NexusFi",
+    description:
+      "NexusFi is a Decentralized Finance Platform where users can create indexes of their favorite tokens and trade them.",
+    tools: ["Rust", "TypeScript", "ReactJS", "TailwindCSS"],
+    github_link: "https://github.com/Nexusfi-org",
+    link: "https://nexusfi.vercel.app/",
   },
 ];
 
