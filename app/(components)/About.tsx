@@ -45,8 +45,9 @@ export default function About() {
               <Reveal side="left">
                 <span>
                   I am a serial hacker and have won over 15 Internation
-                  hackathons, Recently I have won ETHGlobal Bangkok '24,
-                  ETHGlobal London '24, ETH India '24 and Unfold '24.
+                  hackathons, Recently I have won ETHGlobal Bangkok &apos;24,
+                  ETHGlobal London &apos;24, ETH India &apos;24 and Unfold
+                  &apos;24.
                 </span>
               </Reveal>
               <Reveal side="left">
