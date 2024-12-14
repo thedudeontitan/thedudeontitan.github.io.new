@@ -36,15 +36,17 @@ export default function About() {
               </Reveal>
               <Reveal side="left">
                 <span>
-                  I am currently in third year of my Computer Engineering in
-                  Pune, India. I work as a Freelance Web, Mobile and Python
-                  Automantion Developer. I have also worked as a SDE Intern and Fullstack Web
-                  Developer.
+                  I am currently in last year of my Computer Engineering in
+                  Pune, India. I work as a Frontend Developer and also a
+                  Freelance Web, Mobile and Python Automantion Developer. I have
+                  also worked as a SDE Intern and Fullstack Web Developer.
                 </span>
               </Reveal>
               <Reveal side="left">
                 <span>
-                  I am a serial hacker and have won several Internation hackathons, Recently I have won ETHIndia 23, Unfold 23, Chainlink Constellation and Massachusetts Institute Of Technology Hackathon.
+                  I am a serial hacker and have won over 15 Internation
+                  hackathons, Recently I have won ETHGlobal Bangkok '24,
+                  ETHGlobal London '24, ETH India '24 and Unfold '24.
                 </span>
               </Reveal>
               <Reveal side="left">
@@ -62,6 +64,10 @@ export default function About() {
             </div>
             <Reveal side="left">
               <div className="grid grid-cols-2 gap-y-2 gap-x-6 text-base mt-5">
+                <span className="text-[#66FCF1] flex flex-row items-center gap-2">
+                  <VscDebugBreakpointLogUnverified />
+                  Solidity | Move
+                </span>
                 <span className="text-[#66FCF1] flex flex-row items-center gap-2">
                   <VscDebugBreakpointLogUnverified />
                   TypeScript | JavaScript
@@ -88,27 +94,25 @@ export default function About() {
                 </span>
                 <span className="text-[#66FCF1] flex flex-row items-center gap-2">
                   <VscDebugBreakpointLogUnverified />
-                  Postgres | MySQL | SQLite
-                </span>
-                <span className="text-[#66FCF1] flex flex-row items-center gap-2">
-                  <VscDebugBreakpointLogUnverified />
-                  Ethereum | Solidity
+                  Postgres | MongoDB | SQLite
                 </span>
               </div>
             </Reveal>
           </div>
           <Reveal side="right">
             <div
-              className={`ml-5 mt-5 border-2 border-[#66FCF1] rounded h-fit w-fit lg:my-auto transition-all ${isHovered ? "translate-x-1 translate-y-1" : ""
-                }`}
+              className={`ml-5 mt-5 border-2 border-[#66FCF1] rounded h-fit w-fit lg:my-auto transition-all ${
+                isHovered ? "translate-x-1 translate-y-1" : ""
+              }`}
             >
               <Image
                 src="/assets/pfp.png"
                 alt="image"
                 width={300}
                 height={300}
-                className={`-translate-x-4 -translate-y-4 rounded transition-all ${isHovered ? "hover:-translate-x-6 hover:-translate-y-6" : ""
-                  }`}
+                className={`-translate-x-4 -translate-y-4 rounded transition-all ${
+                  isHovered ? "hover:-translate-x-6 hover:-translate-y-6" : ""
+                }`}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               />
